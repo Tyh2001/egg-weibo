@@ -1,0 +1,289 @@
+/* 个人中心和广场公用样式 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #acd4ed;
+}
+
+/* 返回顶部 */
+.fanhui {
+  width: 60px;
+  height: 70px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 5px solid orange;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  display: none;
+  z-index: 100;
+}
+
+/* 上方资料盒子*/
+.top-box {
+  width: 950px;
+  height: 230px;
+  margin: 0 auto;
+  background-image: url("/images/上面背景.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+}
+
+/* 上方头像的盒子 */
+.avatar-box {
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* 上方头像 */
+.top-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+/* 上方昵称 */
+.top-nickname {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+/* 最大盒子 */
+.big-box {
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* 左边盒子 */
+
+.left-box {
+  width: 600px;
+  background-color: #fff;
+  float: left;
+  border-radius: 3px;
+}
+
+/* 个人空间大标题 */
+.left-box h3 {
+  height: 30px;
+  line-height: 46px;
+  margin-left: 30px;
+}
+
+/* 头像 */
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+/* 昵称 */
+.nickname {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 10px;
+  width: 900px;
+  height: 30px;
+}
+
+/* 微博装文字内容的盒子 */
+.text {
+  width: 500px;
+  word-wrap: break-word;
+  font-size: 14px;
+  margin-left: 74px;
+}
+
+/* 微博发表的图片 */
+.image {
+  margin-left: 75px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 165px;
+  height: 100px;
+}
+
+/* 时间框 */
+.time {
+  margin-left: 73px;
+}
+
+/* 点赞框 */
+.good {
+  border-top: 1px solid #f2f2f5;
+  border-bottom: 1px solid #f2f2f5;
+  height: 40px;
+  width: 600px;
+  display: flex;
+}
+
+/* 点赞框 */
+.shoucang,
+.zhuanfa,
+.pinglun,
+.dianzan {
+  width: 150px;
+  border-right: 1px solid #f2f2f5;
+  line-height: 40px;
+  font-size: 16px;
+  color: #696e78;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 下方蓝条 */
+.bottom-fff {
+  height: 30px;
+  width: 600px;
+  background-color: #acd4ed;
+}
+
+/* 加载更多的大盒子 */
+.next {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.next-box {
+  width: 600px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.next-box button {
+  height: 50px;
+  width: 600px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+
+/* -------------------------左右分割------------------------- */
+
+.right-box {
+  width: 300px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 3px;
+  float: right;
+  padding-bottom: 20px;
+}
+
+/* 右边盒子 */
+.right-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* 右边盒子所欲图片大小 */
+.right-box h5 {
+  height: 25px;
+  line-height: 46px;
+  margin-left: 20px;
+}
+
+/* 个人信息标题 */
+.user-info .user-img {
+  margin-left: 20px;
+}
+
+/* 个人信息头像的左边距 */
+.right-box .aite {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* @我的人 */
+.fans {
+  margin-left: 20px;
+}
+
+/* 关注和粉丝整体的左边距 */
+.fans-list {
+  margin-top: 20px;
+  width: 270px;
+  height: 180px;
+  overflow-y: auto;
+}
+
+/* 装粉丝的盒子 */
+.fans-list .abox {
+  width: 60px;
+  height: 90px;
+  float: left;
+}
+
+/* 装粉丝和头像的小盒子 */
+.fans-list .img-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* 装粉丝头像的小盒子 */
+.fans-list .fans-name {
+  text-align: center;
+  /* 昵称长度超出用...显示 */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 装粉丝昵称的小盒子 */
+.follow {
+  width: 50px;
+  height: 30px;
+  margin-left: 15px;
+  margin-top: -10px;
+  border-radius: 3px;
+  border-color: transparent;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: #83d944;
+  color: #fff;
+  font-size: 13px;
+}
+
+/* 关注按钮 */
+.notfollow {
+  width: 50px;
+  height: 30px;
+  margin-left: 15px;
+  margin-top: -10px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid red;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}
+
+/* 滚动滑块 */
+::-webkit-scrollbar-thumb {
+  background: #fe9600;
+}

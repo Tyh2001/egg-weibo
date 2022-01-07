@@ -1,0 +1,43 @@
+/* 上方导航栏 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.layout-big-box {
+  width: 100%;
+  height: 56px;
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 950px;
+}
+
+.layout-big-box .layout-box-a .layout-header-a {
+  font-size: 16px;
+  color: #80bdff;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.layout-big-box .layout-box-a .layout-logo {
+  font-size: 19px;
+  color: #fff;
+  margin-left: 16px;
+}
+
+.layout-big-box .layout-box-b {
+  margin-right: 26px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}
+
+/* 滚动滑块 */
+::-webkit-scrollbar-thumb {
+  background: #fe9600;
+}

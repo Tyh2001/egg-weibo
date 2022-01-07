@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e0e0e0;
+}
+
+/* 背景色的盒子 */
+.login {
+  width: 1200px;
+  height: 540px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 5% auto;
+}
+
+/* 最大的盒子 */
+.login-big-box {
+  width: 1140px;
+  height: 450px;
+  display: flex;
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* 左边的盒子 */
+
+.login-left-box {
+  width: 650px;
+  height: 450px;
+  background-image: url("/images/登录页图片1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+/* 右边的盒子 */
+.login-right-box {
+  width: 450px;
+  height: 450px;
+  margin-left: 40px;
+}
+
+/* 登录h1标签 */
+h1 {
+  font-size: 55px;
+  font-weight: 700;
+  color: #551a8b;
+}
+
+/* 文本框 */
+.inpa {
+  width: 350px;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 7px;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  outline: none;
+}
+
+.inpb {
+  width: 350px;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 7px;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  outline: none;
+}
+
+/* 文本框水说明的文字 */
+.spana {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+/* 登录按按 */
+button {
+  width: 350px;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  background-color: #551a8b;
+  outline-color: #551a8b;
+  color: #fff;
+  font-size: 13px;
+}
+
+/* 去掉a标签下划线 */
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,72 @@
+{% extends "./layout/layout.html" %}
+
+{% block content %}
+
+<!-- 登录页面 -->
+<link rel="stylesheet" href="/css/login.css">
+{% if isLogin %}
+<p class="admin" style="font-size: 30px;text-align: center;margin-top: 150px;">
+  欢迎{{username}},您已登录,请返回&nbsp;&nbsp;
+  <a href="/">首页></a>
+</p>
+<!-- 判断是否登录 如果登录就跳转 -->
+{% else %}
+
+<div class="login">
+  <div class="login-big-box">
+    <div class="login-left-box"></div>
+
+    <div class="login-right-box">
+      <h1>登录</h1>
+      <br><br><br>
+      <input class="inpa" type="text" placeholder="请输入账号">
+      <br><br>
+      <input class="inpb" type="password" placeholder="请输入密码">
+      <br><br>
+      <button class="login-btn">登录</button>
+      <br><br>
+      <a href="/loginster">还没有账号？来注册吧>>></a>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+
+{% block js %}
+
+<script>
+  $(".login-btn").click(function (e) {
+    // 阻止表单提交的默认行为 刷新页面
+    e.preventDefault();
+
+    // 获取用户名和密码
+    const username = $(".inpa").val();
+    const password = $(".inpb").val();
+
+    // 账号和密码发送给后台去对比
+    ajax.post("/api/user/login", {
+      username,
+      password
+    }, function (err, data) {
+      if (err) {
+        alert(err);
+        return;
+      };
+      let sear = location.search;
+      // decodeURIComponent()方法将将URI编码转换为正常值
+      let redirectUrl = decodeURIComponent(sear.split("=")[1]);
+      // 重定向
+      if (redirectUrl === "undefined") {
+        // 登录成功后返回首页
+        location.href = "/";
+      } else {
+        location.href = redirectUrl;
+      };
+    });
+  });
+</script>
+
+{% endblock %}

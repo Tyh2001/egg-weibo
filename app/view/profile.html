@@ -1,0 +1,83 @@
+{% set isNav = true %}
+
+{% extends "./layout/layout.html" %}
+
+{% import './macros/blog-list.html' as lis %}
+
+{% import './macros/loadMore.html' as loadBtn %}
+
+{% import './macros/user-info.html' as user %}
+
+{% import './macros/fans.html' as fans %}
+
+{% import './macros/follower.html' as follower %}
+
+{% block content %}
+
+<!-- 个人空间页面 -->
+<link rel="stylesheet" href="/css/profile.css">
+<div class="fanhui">
+  <h6 style="text-align: center;">返回</h6>
+  <h6 style="text-align: center;">顶部</h6>
+</div>
+
+<div class="top-box">
+  <div class="avatar-box">
+    <img class="top-avatar" src="{{userData.userInfo.avatar}}" alt="用户头像">
+  </div>
+  <!-- 这里显示的是昵称 如果没有昵称就不显示 -->
+  <h2 class="top-nickname">{{userData.userInfo.nickname}}</h2>
+</div>
+
+<div class="big-box">
+
+  <div class="left-box">
+    <h3>个人空间</h3>
+    <hr class="hra">
+
+    <!-- 博客内容封装 -->
+    {% for item in blogList %}
+
+    {{ lis.list(item) }}
+
+    {% endfor %}
+  </div>
+
+  <!-- 右边的内容 -->
+  <div class="right-box">
+    <h5>个人信息</h5>
+    <br>
+    {{ user.userInfo(
+    user = userData.userInfo,
+    isMe = userData.isMe,
+    isMeFollow = userData.isMeFollow,
+    atCount = userData.atCount
+    ) }}
+
+    <!-- 关注列表 -->
+    <div style="display: flex;">
+      {{ follower.showFollower(
+      count = userData.followData.count,
+      userList = userData.followData.followList
+      ) }}
+    </div>
+    <hr>
+    <!-- 粉丝列表 -->
+    {{fans.showFans(
+    count = userData.fansData.count,
+    userList = userData.fansData.fansList
+    ) }}
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+
+<!-- 加载更多封装 -->
+{{ loadBtn.loadMore(
+pageIndex,
+pageSize,
+count, api='/api/blog/loadProfileMore/'+userData.userInfo.username+"/"
+)}}
+
+{% endblock %}

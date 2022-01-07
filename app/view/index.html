@@ -1,0 +1,146 @@
+{% set isNav = true %}
+
+{% extends "./layout/layout.html" %}
+
+{% import './macros/blog-list.html' as lis %}
+
+{% import './macros/loadMore.html' as loadBtn %}
+
+{% import './macros/user-info.html' as user %}
+
+{% import './macros/fans.html' as fans %}
+
+{% import './macros/follower.html' as follower %}
+
+{% import './macros/input.html' as inputTag %}
+
+{% block content %}
+
+<!-- 首页 -->
+<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/profile.css">
+<div class="fanhui">
+  <h6 style="text-align: center;">返回</h6>
+  <h6 style="text-align: center;">顶部</h6>
+</div>
+<div class="index-big-box">
+  <!-- 左边盒子 -->
+  <div class="index-left-box">
+    <!-- 文本框 -->
+
+    {{ inputTag.input() }}
+
+    <br>
+
+    <!-- 博客内容 -->
+    <div class="left-box">
+      {% for item in blogList %}
+
+      {{ lis.list(item,CanReply=true) }}
+
+      {% endfor %}
+    </div>
+
+    <!-- 加载更多 -->
+    {{ loadBtn.loadMore(
+    pageIndex,
+    pageSize,
+    count,
+    isCanReply=true,
+    api='/api/blog/loadHomeBlogMore/'
+    )}}
+  </div>
+  <!-- 右边盒子 -->
+  <div class="right-box">
+    <h5>个人信息</h5>
+    <br> {{ user.userInfo(
+    user=userData.userInfo,
+    isMe=userData.isMe,
+    isMeFollow=userData.isMeFollow,
+    atCount=userData.atCount
+    ) }}
+
+    <!-- 关注列表 -->
+    <div style="display: flex;">
+      {{ follower.showFollower(
+      count=userData.followData.count,
+      userList=userData.followData.followList
+      ) }}
+    </div>
+    <hr>
+    <!-- 粉丝列表 -->
+    {{fans.showFans(
+    count=userData.fansData.count,
+    userList=userData.fansData.fansList
+    ) }}
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+  // 发布博客插入图片
+  $(".index-a").click(function (e) {
+    e.preventDefault();
+    //触发$("file-img") jquery 对象的点击事件
+    $(".index-file").click();
+  });
+
+
+  $(".index-file").change(function () {
+    const file = $(this)[0].files[0];
+    ajax.upload('/api/uploadImg', file, function (err, data) {
+      if (err) {
+        alert(err);
+        return;
+      };
+      $(".img-info").text(file.name);
+      $("#file-img-url").val(data.url);
+    });
+  });
+
+  // 发布微博
+  $(".index-btn").click(function (e) {
+
+    // 阻止默认行为
+    e.preventDefault();
+
+    //传递内容和图片地址
+    const image = $(".index-inp").val();
+
+    // 传数据
+    // /api/blog/createBlog 是后台路由
+    // 传数据content
+    // 获取到文本里的文字
+    const content = $(".index-textarea").val();
+    // 如果没有内容
+    if (!content) {
+      alert("发表的内容不能为空");
+    };
+    const data = {
+      content,
+    };
+    if (image) {
+      // 如果有图片就执行  没有就跳过
+      data.image = image;
+    };
+    ajax.post("/api/blog/createBlog", data, function (err, data) {
+      if (err) {
+        alert(err);
+        return;
+      };
+      location.href = "/";
+    });
+  });
+
+  // @功能
+  $("#textarea").atwho({
+    at: "@",
+    data: '/api/user/getAtList',
+  })
+</script>
+
+{% endblock %}

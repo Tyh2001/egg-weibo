@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 575px;
+  margin: auto;
+  display: flex;
+}
+
+.boxb {
+  width: 400px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  text-align: center;
+}

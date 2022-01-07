@@ -1,0 +1,166 @@
+{% macro loadMore(pageIndex,pageSize,count,isCanReply,api) %}
+
+<!-- 加载个更多封装 -->
+<div class="next">
+  <div class="next-box">
+    <button>加载更多</button>
+  </div>
+</div>
+
+
+<script>
+  const pageIndex = parseInt('{{pageIndex}}');
+  const pageSize = parseInt('{{pageSize}}');
+  const count = parseInt('{{count}}');
+
+  if (pageSize * pageIndex >= count) {
+    $(".next").hide()
+  }
+
+  // 返回顶部的按钮效果
+  // 滚轮向下滑动返回顶部按钮就显示
+  $(window).scroll(function () {
+    var a = $(this).scrollTop();
+    if (a > 0) {
+      $(".fanhui").css("display", "block");
+    } else {
+      $(".fanhui").css("display", "none");
+    };
+  });
+
+  // 点击按钮页面返回顶部
+  $(".fanhui").click(function () {
+    $("html,body").animate({
+      scrollTop: 0,
+    }, 0)
+  });
+
+  let nextPageIndex = pageIndex;
+  $(".next-box").click(function () {
+
+
+    // 通过ajax获取数据
+    ajax.get('{{api}}' + nextPageIndex,
+      function (err, res) {
+        if (err) {
+          alert(err)
+        }
+        nextPageIndex = res.pageIndex; // 当前的页码
+        // 渲染dom
+        res.blogList.forEach(item => {
+          const $loadMoreTemplate =
+            `
+                <img class="avatar" src="${item.user.avatar}" alt="用户头像">
+                <a href="/profile/{{user.username}}">
+                    <span class="nickname">${item.user.username}:</span>
+                </a>
+                <div class="text">
+                    <span>${item.formatContent}</span>
+                </div>
+
+                {% if item.image %}
+                <a href="${item.image}" target="_blank">
+                    <img src="${item.image}" alt="" class="image" />
+                </a>
+                {% endif %}
+
+                <p class="time">${item.createdAtFormat}</p>
+
+                {% if isCanReply %}
+
+                <div style="width: 100px;margin-left: 75px;padding-bottom: 20px;">
+                    <a
+                        href="#"
+                        style="font-size: 15px;text-decoration: none;"
+                        class="reply"data-nick-name="${item.user.nickname}"
+                        data-user-name="${item.user.username}"
+                        data-content="${item.content}"
+                    >
+                    <svg style="width: 25px;height: 25px;" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 300 300"style="enable-background:new 0 0 300 300;"
+                        xml:space="preserve"
+                    >
+                        <style type="text/css">
+                            .st0 {
+                                fill: #007BFF;
+                            }
+                        </style>
+                        <g>
+                            <g>
+                                <path class="st0"d="M142.17,240.71l-120.2-88.83c-0.88-0.65-0.89-1.97-0.01-2.62l119.7-89.96L142.17,240.71z" />
+                            </g>
+                            <g>
+                                <path class="st0" d="M278,187.27c0,9.98-4.08,19.06-10.66,25.64c-5.37,5.37-12.39,9.06-20.22,10.25c0.96-3.8,1.49-7.79,1.49-11.89
+                                v-12.2c0-10.78-8.82-19.59-19.59-19.59h-129v-62.05l108.59,2.45C247.01,119.88,278,148.86,278,187.27z" />
+                            </g>
+                        </g>
+                    </svg>
+                        回复
+                    </a>
+                </div>
+
+                {% endif %}
+
+                <div class="good">
+                    <div class="shoucang">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                        </svg>&nbsp;收藏
+                    </div>
+                    <div class="zhuanfa">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                            <path fill-rule="evenodd"
+                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                        </svg>&nbsp;转发
+                    </div>
+                    <div class="pinglun">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-text" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                            <path fill-rule="evenodd"
+                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                        </svg>&nbsp;评论
+                    </div>
+                    <div class="dianzan">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hand-thumbs-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.
+                                463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.66
+                                9-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.36
+                                3.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.0
+                                03 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 1
+                                5.522 12.437 16 11.5 16v-1c.563 0 .901-.272 1.066-.56a.865.865 0 0 0 .121-.416c0-.12-.035-.16
+                                5-.04-.17l-.354-.354.353-.354c.202-.201.407-.511.505-.804.104-.312.043-.441-.005-.488l-.353-.3
+                                54.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.0
+                                5-.174-.111-.273-.154-.315L12.793 9l.353-.354c.353-.352.373-.713.267-1.02-.122-.35-.396-.593-.5
+                                71-.652-.653-.217-1.447-.224-2.11-.164a8.907 8.907 0 0 0-1.094.171l-.014.003-.003.001a.5.5 0 0 
+                                1-.595-.643 8.34 8.34 0 0 0 .145-4.726c-.03-.111-.128-.215-.288-.255l-.262-.065c-.306-.077-.64
+                                2.156-.667.518-.075 1.082-.239 2.15-.482 2.85-.174.502-.603 1.268-1.238 1.977-.637.712-1.519 1.
+                                41-2.614 1.708-.394.108-.62.396-.62.65v4.002c0 .26.22.515.553.55 1.293.137 1.936.53 2.491.868l
+                                .04.025c.27.164.495.296.776.393.277.095.63.163 1.14.163h3.5v1H8c-.605 0-1.07-.081-1.466-.218a
+                                4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V
+                                9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.
+                                575.356-1.539.428-2.59z"
+                            />
+                        </svg>&nbsp;点赞
+                    </div>
+                </div>
+                <div class="bottom-fff"></div>
+            `
+          $('.left-box').append($loadMoreTemplate)
+        })
+
+        // 如果显示的数量 = 博客总量  就隐藏按钮
+        if (pageSize * (res.pageIndex) >= count) {
+          $(".next-box").hide()
+        }
+      })
+  })
+</script>
+
+{% endmacro %}

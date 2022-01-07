@@ -1,0 +1,194 @@
+/* 首页 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #acd4ed;
+}
+
+.index-big-box {
+  display: flex;
+  width: 950px;
+  margin: 30px auto;
+}
+
+.index-big-box .index-big-box-left {
+  width: 900px;
+  border: 1px solid black;
+}
+
+/* 文本框样式 */
+.index-big-box .index-textarea {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 600px;
+  height: 84px;
+  padding-left: 10px;
+}
+
+.index-big-box .index-big-box-left .index-btn-box .index-btn {
+  width: 58px;
+  height: 38px;
+  background-color: #007bff;
+  border-radius: 3px;
+  color: #fff;
+  border: 0;
+  outline: none;
+}
+
+.index-big-box .index-big-box-left .index-btn-box .index-a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.index-big-box .index-big-box-left .index-btn-box .index-fenge {
+  width: 800px;
+  height: 1px;
+  margin-top: 11px;
+  background-color: #dee2e6;
+}
+
+/* 左右样式分割 */
+
+.index-big-box .index-big-box-right {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.index-big-box .index-big-box-right .index-tu {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* 左边盒子 */
+
+.index-big-box .index-left-box {
+  width: 650px;
+}
+
+/* 右边盒子 */
+
+.right-box {
+  width: 300px;
+}
+
+.index-big-box .index-left-box .index-fabiao-box {
+  margin-top: 10px;
+}
+
+.index-big-box .index-left-box .index-fabiao-box .index-btn {
+  width: 50px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  background-color: #007bff;
+  outline-color: #007bff;
+  color: #fff;
+  font-size: 13px;
+}
+
+.index-big-box .index-left-box .index-fabiao-box .index-a {
+  text-decoration: none;
+}
+
+/* 右边盒子 */
+
+.right-box {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 3px;
+  float: right;
+  padding-bottom: 20px;
+}
+
+/* 右边盒子 */
+
+.right-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* 右边盒子所欲图片大小 */
+
+.right-box h5 {
+  height: 25px;
+  line-height: 46px;
+  margin-left: 20px;
+}
+
+/* 个人信息标题 */
+
+.user-info .user-img {
+  margin-left: 20px;
+}
+
+/* 个人信息头像的左边距 */
+
+.right-box .aite {
+  margin-left: 20px;
+}
+
+/* @我的人 */
+
+.fans {
+  margin-left: 20px;
+}
+
+/* 关注和粉丝整体的左边距 */
+
+.fans-list {
+  margin-top: 20px;
+  width: 270px;
+  height: 180px;
+  overflow-y: auto;
+}
+
+/* 装粉丝的盒子 */
+
+.fans-list .abox {
+  width: 60px;
+  height: 90px;
+  float: left;
+}
+
+/* 装粉丝和头像的小盒子 */
+
+.fans-list .img-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* 装粉丝头像的小盒子 */
+
+.fans-list .fans-name {
+  text-align: center;
+  /* 昵称长度超出用...显示 */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 装粉丝昵称的小盒子 */
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}
+
+/* 滚动滑块 */
+::-webkit-scrollbar-thumb {
+  background: #fe9600;
+}

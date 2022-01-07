@@ -1,0 +1,42 @@
+2021-07-27 09:32:13,901 INFO 5140 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:32:13,901 INFO 5140 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:32:13,901 INFO 5140 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:32:14,643 INFO 11432 [Timer] D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 68265360ms at 2021-07-28 04:30:00.003
+2021-07-27 09:32:14,643 INFO 11432 [Timer] D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 52065357ms at 2021-07-28 00:00:00.000
+2021-07-27 09:32:14,643 INFO 11432 [Timer] D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 52066357ms at 2021-07-28 00:00:01.000
+2021-07-27 09:32:44,860 INFO 11692 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:32:44,860 INFO 11692 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:32:44,860 INFO 11692 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:32:48,609 INFO 6520 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:32:48,609 INFO 6520 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:32:48,609 INFO 6520 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:32:59,655 INFO 10424 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:32:59,655 INFO 10424 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:32:59,655 INFO 10424 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:33:02,808 INFO 2588 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:33:02,808 INFO 2588 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:33:02,808 INFO 2588 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:33:16,432 INFO 6316 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:33:16,432 INFO 6316 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:33:16,432 INFO 6316 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:33:22,745 INFO 10288 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:33:22,745 INFO 10288 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:33:22,745 INFO 10288 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:33:27,929 INFO 6152 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:33:27,929 INFO 6152 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:33:27,929 INFO 6152 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:33:38,859 INFO 2440 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:33:38,859 INFO 2440 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:33:38,859 INFO 2440 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:33:42,202 INFO 6608 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:33:42,202 INFO 6608 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:33:42,202 INFO 6608 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:33:48,238 INFO 5872 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:33:48,238 INFO 5872 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:33:48,238 INFO 5872 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:33:52,666 INFO 14072 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:33:52,666 INFO 14072 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:33:52,666 INFO 14072 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2021-07-27 09:34:03,373 INFO 10324 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2021-07-27 09:34:03,373 INFO 10324 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\clean_log.js
+2021-07-27 09:34:03,373 INFO 10324 [egg-schedule]: register schedule D:\Tyh----------Tyh----------------\我的项目\egg-weibo\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
