@@ -10,7 +10,7 @@
 
 ### 技术栈
 
-Egg.js、Node.js、Nunjucks、jQuery、Ajax、Bootstrap、MySQL、Session、Redis、Npm、Gitee
+Egg.js、Node.js、Nunjucks、jQuery、Ajax、Bootstrap、MySQL、Session、Redis
 
 
 
@@ -18,7 +18,7 @@ Egg.js、Node.js、Nunjucks、jQuery、Ajax、Bootstrap、MySQL、Session、Redi
 
 1. 启动 PhpStudy
 
-PhpStudy 下载地址：https://www.xp.cn/
+PhpStudy 下载地址：https://www.xp.cn
 
 
 
