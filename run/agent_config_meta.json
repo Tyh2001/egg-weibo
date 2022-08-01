@@ -4,69 +4,72 @@
   "security": {
     "csrf": {
       "enable": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
-      "type": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "ignoreJSON": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "useSession": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "cookieName": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "sessionName": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "headerName": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "bodyName": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "queryName": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "refererWhiteList": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "type": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "supportedRequests": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
-    "domainWhiteList": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-    "protocolWhiteList": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-    "defaultMiddleware": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
+    "domainWhiteList": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
     "xframe": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "maxAge": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "includeSubdomains": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "maxAge": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "dta": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "methodnoallow": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "noopen": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "nosniff": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "referrerPolicy": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "xssProtection": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "csp": {
-      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "policy": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     },
     "ssrf": {
-      "ipBlackList": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js",
-      "checkAddress": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+      "ipBlackList": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "ipExceptionList": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
     }
   },
   "view": {
     "defaultExtension": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
     "defaultViewEngine": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
-    "root": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view\\config\\config.default.js",
-    "mapping": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view\\config\\config.default.js"
+    "root": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-view@2.1.3\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-view@2.1.3\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-view@2.1.3\\node_modules\\egg-view\\config\\config.default.js"
   },
   "session": {
     "key": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
     "maxAge": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
     "httpOnly": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
-    "encrypt": "D:\\项目文件\\egg-weibo\\config\\config.default.js"
+    "encrypt": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
+    "logValue": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-session@3.3.0\\node_modules\\egg-session\\config\\config.default.js"
   },
   "redis": {
     "client": {
@@ -76,17 +79,17 @@
       "db": "D:\\项目文件\\egg-weibo\\config\\config.default.js"
     },
     "agent": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
-    "default": "D:\\项目文件\\egg-weibo\\node_modules\\egg-redis\\config\\config.default.js",
-    "app": "D:\\项目文件\\egg-weibo\\node_modules\\egg-redis\\config\\config.default.js",
-    "supportTimeCommand": "D:\\项目文件\\egg-weibo\\node_modules\\egg-redis\\config\\config.default.js"
+    "default": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-redis@2.4.0\\node_modules\\egg-redis\\config\\config.default.js",
+    "app": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-redis@2.4.0\\node_modules\\egg-redis\\config\\config.default.js",
+    "supportTimeCommand": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-redis@2.4.0\\node_modules\\egg-redis\\config\\config.default.js"
   },
   "static": {
     "prefix": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
     "dir": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
-    "dynamic": "D:\\项目文件\\egg-weibo\\node_modules\\egg-static\\config\\config.default.js",
-    "preload": "D:\\项目文件\\egg-weibo\\node_modules\\egg-static\\config\\config.default.js",
-    "buffer": "D:\\项目文件\\egg-weibo\\node_modules\\egg-static\\config\\config.default.js",
-    "maxFiles": "D:\\项目文件\\egg-weibo\\node_modules\\egg-static\\config\\config.default.js"
+    "dynamic": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-static@2.2.0\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-static@2.2.0\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-static@2.2.0\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-static@2.2.0\\node_modules\\egg-static\\config\\config.default.js"
   },
   "sequelize": {
     "dialect": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
@@ -94,7 +97,7 @@
     "username": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
     "password": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
     "database": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
-    "port": "D:\\项目文件\\egg-weibo\\node_modules\\egg-sequelize\\config\\config.default.js"
+    "port": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-sequelize@6.0.0_mysql2@2.3.3\\node_modules\\egg-sequelize\\config\\config.default.js"
   },
   "ajv": {
     "keyword": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
@@ -104,226 +107,220 @@
   "multipart": {
     "mode": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
     "fileSize": "D:\\项目文件\\egg-weibo\\config\\config.default.js",
-    "autoFields": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
-    "defaultCharset": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldNameSize": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldSize": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fields": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
-    "files": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileExtensions": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
-    "whitelist": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
-    "tmpdir": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "allowArrayField": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
     "cleanSchedule": {
-      "cron": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart\\config\\config.default.js"
+      "cron": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js",
+      "disable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-multipart@2.13.1\\node_modules\\egg-multipart\\config\\config.default.js"
     }
   },
   "helper": {
-    "shtml": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security\\config\\config.default.js"
+    "shtml": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-security@2.11.0\\node_modules\\egg-security\\config\\config.default.js"
   },
   "jsonp": {
-    "limit": "D:\\项目文件\\egg-weibo\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "callback": "D:\\项目文件\\egg-weibo\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "csrf": "D:\\项目文件\\egg-weibo\\node_modules\\egg-jsonp\\config\\config.default.js"
+    "limit": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-jsonp@2.0.0\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-jsonp@2.0.0\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-jsonp@2.0.0\\node_modules\\egg-jsonp\\config\\config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "D:\\项目文件\\egg-weibo\\node_modules\\egg-onerror\\config\\config.default.js",
-    "appErrorFilter": "D:\\项目文件\\egg-weibo\\node_modules\\egg-onerror\\config\\config.default.js",
-    "templatePath": "D:\\项目文件\\egg-weibo\\node_modules\\egg-onerror\\config\\config.default.js"
+    "errorPageUrl": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-onerror@2.1.0\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-onerror@2.1.0\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-onerror@2.1.0\\node_modules\\egg-onerror\\config\\config.default.js"
   },
   "i18n": {
-    "defaultLocale": "D:\\项目文件\\egg-weibo\\node_modules\\egg-i18n\\config\\config.default.js",
-    "dirs": "D:\\项目文件\\egg-weibo\\node_modules\\egg-i18n\\config\\config.default.js",
-    "queryField": "D:\\项目文件\\egg-weibo\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieField": "D:\\项目文件\\egg-weibo\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieDomain": "D:\\项目文件\\egg-weibo\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieMaxAge": "D:\\项目文件\\egg-weibo\\node_modules\\egg-i18n\\config\\config.default.js"
+    "defaultLocale": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-i18n@2.1.1\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-i18n@2.1.1\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-i18n@2.1.1\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-i18n@2.1.1\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-i18n@2.1.1\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-i18n@2.1.1\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "D:\\项目文件\\egg-weibo\\node_modules\\egg-watcher\\config\\config.unittest.js",
+    "type": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-watcher@3.1.1\\node_modules\\egg-watcher\\config\\config.unittest.js",
     "eventSources": {
-      "default": "D:\\项目文件\\egg-weibo\\node_modules\\egg-watcher\\config\\config.default.js",
-      "development": "D:\\项目文件\\egg-weibo\\node_modules\\egg-watcher\\config\\config.default.js"
+      "default": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-watcher@3.1.1\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-watcher@3.1.1\\node_modules\\egg-watcher\\config\\config.default.js"
     }
   },
   "customLogger": {
     "scheduleLogger": {
-      "consoleLevel": "D:\\项目文件\\egg-weibo\\node_modules\\egg-schedule\\config\\config.default.js",
-      "file": "D:\\项目文件\\egg-weibo\\node_modules\\egg-schedule\\config\\config.default.js"
+      "consoleLevel": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-schedule@3.6.6\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-schedule@3.6.6\\node_modules\\egg-schedule\\config\\config.default.js"
     }
   },
   "schedule": {
-    "directory": "D:\\项目文件\\egg-weibo\\node_modules\\egg-schedule\\config\\config.default.js"
+    "directory": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-schedule@3.6.6\\node_modules\\egg-schedule\\config\\config.default.js"
   },
   "logrotator": {
-    "filesRotateByHour": "D:\\项目文件\\egg-weibo\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "hourDelimiter": "D:\\项目文件\\egg-weibo\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "filesRotateBySize": "D:\\项目文件\\egg-weibo\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFileSize": "D:\\项目文件\\egg-weibo\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFiles": "D:\\项目文件\\egg-weibo\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "rotateDuration": "D:\\项目文件\\egg-weibo\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxDays": "D:\\项目文件\\egg-weibo\\node_modules\\egg-logrotator\\config\\config.default.js"
+    "filesRotateByHour": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-logrotator@3.1.0\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-logrotator@3.1.0\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-logrotator@3.1.0\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-logrotator@3.1.0\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-logrotator@3.1.0\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-logrotator@3.1.0\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-logrotator@3.1.0\\node_modules\\egg-logrotator\\config\\config.default.js"
   },
   "nunjucks": {
-    "autoescape": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "throwOnUndefined": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "trimBlocks": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "lstripBlocks": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "cache": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view-nunjucks\\config\\config.default.js"
+    "autoescape": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-view-nunjucks@2.3.0\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "throwOnUndefined": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-view-nunjucks@2.3.0\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "trimBlocks": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-view-nunjucks@2.3.0\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "lstripBlocks": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-view-nunjucks@2.3.0\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
+    "cache": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-view-nunjucks@2.3.0\\node_modules\\egg-view-nunjucks\\config\\config.default.js"
   },
   "sessionRedis": {
-    "name": "D:\\项目文件\\egg-weibo\\node_modules\\egg-session-redis\\config\\config.default.js"
+    "name": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg-session-redis@2.1.0\\node_modules\\egg-session-redis\\config\\config.default.js"
   },
-  "env": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "name": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "cookies": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "proxy": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "maxIpsCount": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "maxProxyCount": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "protocolHeaders": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "ipHeaders": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "hostHeaders": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
+  "env": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "name": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
   "pkg": {
-    "name": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "private": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
+    "name": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "private": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "scripts": {
+      "dev": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "prettier": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "start": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "stop": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "debug": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "test": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "test-local": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "cov": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "autod": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
+    },
     "egg": {
-      "declarations": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "declarations": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     },
     "dependencies": {
-      "bootstrap": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "bootstrap-icons": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-ajv": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-redis": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-scripts": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-sequelize": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-session-redis": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-view-nunjucks": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "mysql2": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "mz-modules": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "pre-commit": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "prettier": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "bootstrap": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "bootstrap-icons": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-ajv": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-redis": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-sequelize": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-session-redis": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-view-nunjucks": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "mysql2": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "mz-modules": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "pre-commit": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "prettier": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
-      "autod": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "autod-egg": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-bin": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-ci": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-mock": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "eslint": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "eslint-config-egg": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "autod": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "autod-egg": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-bin": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-ci": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     },
     "engines": {
-      "node": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
-    },
-    "scripts": {
-      "dev": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "prettier": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "start": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "stop": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "debug": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "test": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "test-local": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "cov": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "lint": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "ci": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "autod": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "node": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     },
     "ci": {
-      "version": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
-    },
-    "repository": {
-      "type": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "url": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
-    },
-    "author": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "license": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "version": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
+    }
   },
-  "baseDir": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "HOME": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "rundir": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
+  "baseDir": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
   "dump": {
-    "ignore": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+    "ignore": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
   },
   "confusedConfigurations": {
-    "bodyparser": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "notFound": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "sitefile": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "middlewares": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "httpClient": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+    "bodyparser": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
   },
   "notfound": {
-    "pageUrl": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+    "pageUrl": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
   },
   "siteFile": {
-    "/favicon.ico": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+    "/favicon.ico": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "cacheControl": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
   },
   "bodyParser": {
-    "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "formLimit": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "jsonLimit": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "textLimit": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "strict": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
+    "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "strict": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
     "queryString": {
-      "arrayLimit": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "depth": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "parameterLimit": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "arrayLimit": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "depth": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     },
-    "onerror": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+    "onerror": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
   },
   "logger": {
-    "dir": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "env": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "level": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.unittest.js",
-    "disableConsoleAfterReady": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "outputJSON": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.unittest.js",
-    "appLogName": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "coreLogName": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "agentLogName": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "errorLogName": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "coreLogger": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "allowDebugAtProd": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+    "dir": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "env": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "level": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.unittest.js",
+    "disableConsoleAfterReady": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.unittest.js",
+    "appLogName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "allowDebugAtProd": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "enablePerformanceTimer": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
   },
   "httpclient": {
-    "enableDNSCache": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheLookupInterval": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheMaxLength": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
+    "enableDNSCache": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
     "request": {
-      "timeout": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "timeout": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "meta": {
-    "enable": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "logging": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+    "enable": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "logging": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
   },
-  "coreMiddleware": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "workerStartTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-  "serverTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
+  "coreMiddleware": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
   "cluster": {
     "listen": {
-      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "port": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "hostname": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "port": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "clusterClient": {
-    "maxWaitTime": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-    "responseTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+    "maxWaitTime": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
   },
-  "onClientError": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+  "onClientError": "D:\\项目文件\\egg-weibo\\node_modules\\.pnpm\\egg@2.36.0\\node_modules\\egg\\config\\config.default.js"
 }

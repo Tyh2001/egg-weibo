@@ -1,6 +1,17 @@
 {
   "name": "egg-weibo",
   "private": true,
+  "scripts": {
+    "dev": "egg-bin dev",
+    "prettier": "prettier --write .",
+    "start": "egg-scripts start --daemon --title=egg-server-weibo",
+    "stop": "egg-scripts stop --title=egg-server-weibo",
+    "debug": "egg-bin debug",
+    "test": "npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "autod": "autod"
+  },
   "egg": {
     "declarations": true
   },
@@ -16,7 +27,6 @@
     "egg-view-nunjucks": "^2.2.0",
     "mysql2": "^2.2.3",
     "mz-modules": "^2.1.0",
-    "pre-commit": "^1.2.2",
     "prettier": "^2.7.1"
   },
   "devDependencies": {
@@ -29,26 +39,7 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "scripts": {
-    "dev": "egg-bin dev",
-    "prettier": "prettier --write .",
-    "start": "egg-scripts start --daemon --title=egg-server-weibo",
-    "stop": "egg-scripts stop --title=egg-server-weibo",
-    "debug": "egg-bin debug",
-    "test": "npm run test-local",
-    "test-local": "egg-bin test",
-    "cov": "egg-bin cov",
-    "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
-    "autod": "autod"
-  },
   "ci": {
     "version": "10"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "",
-  "license": "MIT"
+  }
 }

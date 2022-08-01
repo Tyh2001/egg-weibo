@@ -1,0 +1,30 @@
+2022-08-01 10:52:21,815 ERROR 13280 [egg-redis] client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+2022-08-01 10:52:21,817 ERROR 13280 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+errno: -4078
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 13280
+hostname: DESKTOP-095PKBM
+
+2022-08-01 10:52:21,820 ERROR 13280 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+errno: -4078
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 13280
+hostname: DESKTOP-095PKBM
+

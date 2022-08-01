@@ -2,7 +2,7 @@
 
 该仓库是 egg-weibo 的所有数据库文件
 
-用作 egg-weib 项目
+用作 egg-weibo 项目
 
 项目地址：https://github.com/Tyh2001/egg-weibo
 

@@ -209,17 +209,14 @@
       "egg-session-redis": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
       "egg-view-nunjucks": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
       "mysql2": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "mz-modules": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "pre-commit": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "mz-modules": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
       "autod": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
       "autod-egg": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
       "egg-bin": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
       "egg-ci": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "egg-mock": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "eslint": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js",
-      "eslint-config-egg": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
+      "egg-mock": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js"
     },
     "engines": {
       "node": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\config.default.js"

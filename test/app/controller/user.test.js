@@ -1,10 +1,3 @@
-/* eslint-disable eol-last */
-/* eslint-disable no-undef */
-/* eslint-disable no-multiple-empty-lines */
-/* eslint-disable semi */
-/* eslint-disable space-before-function-paren */
-/* eslint-disable indent */
-/* eslint-disable quotes */
 'use strict'
 
 const { app, assert } = require('egg-mock/bootstrap')
@@ -90,7 +83,6 @@ describe('user test', () => {
 
   // 更改密码
   it('更改密码,应该成功', async () => {
-    // eslint-disable-next-line no-unused-vars
     const result = await app
       .httpRequest()
       .post('/api/user/changepassword')

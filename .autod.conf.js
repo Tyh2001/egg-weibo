@@ -12,8 +12,6 @@ module.exports = {
     'egg-mock',
     'autod',
     'autod-egg',
-    'eslint',
-    'eslint-config-egg'
   ],
   exclude: ['./test/fixtures', './dist']
 }

@@ -250,17 +250,14 @@
         "egg-session-redis": "^2.1.0",
         "egg-view-nunjucks": "^2.2.0",
         "mysql2": "^2.2.3",
-        "mz-modules": "^2.1.0",
-        "pre-commit": "^1.2.2"
+        "mz-modules": "^2.1.0"
       },
       "devDependencies": {
         "autod": "^3.0.1",
         "autod-egg": "^1.1.0",
         "egg-bin": "^4.11.0",
         "egg-ci": "^1.11.0",
-        "egg-mock": "^3.21.0",
-        "eslint": "^5.13.0",
-        "eslint-config-egg": "^7.1.0"
+        "egg-mock": "^3.21.0"
       },
       "engines": {
         "node": ">=10.0.0"
@@ -273,7 +270,6 @@
         "test": "npm run test-local",
         "test-local": "egg-bin test",
         "cov": "egg-bin cov",
-        "lint": "eslint .",
         "ci": "npm run lint && npm run cov",
         "autod": "autod"
       },
