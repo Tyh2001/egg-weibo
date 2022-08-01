@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 /** 
 *处理相应结果 对成功和失败的信息统一处理  注册时检测用户名是否存在
 jsdoc 形式注释
@@ -13,12 +13,12 @@ jsdoc 形式注释
 // 声明基类
 class BaseModel {
   constructor({ errno, data, message }) {
-    this.errno = errno;
+    this.errno = errno
     if (data) {
-      this.data = data;
+      this.data = data
     }
     if (message) {
-      this.message = message;
+      this.message = message
     }
   }
 }
@@ -28,8 +28,8 @@ class SuccessModel extends BaseModel {
   constructor(data = {}) {
     super({
       errno: 0,
-      data,
-    });
+      data
+    })
   }
 }
 // 失败 Errormodel
@@ -37,12 +37,12 @@ class ErrorModel extends BaseModel {
   constructor({ errno, message }) {
     super({
       errno,
-      message,
-    });
+      message
+    })
   }
 }
 
 module.exports = {
   SuccessModel,
-  ErrorModel,
-};
+  ErrorModel
+}

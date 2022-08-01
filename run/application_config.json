@@ -83,10 +83,7 @@
     },
     "jsonp": {
       "limit": 50,
-      "callback": [
-        "_callback",
-        "callback"
-      ],
+      "callback": ["_callback", "callback"],
       "csrf": false
     },
     "onerror": {
@@ -427,9 +424,7 @@
       "package": "egg-security",
       "name": "security",
       "dependencies": [],
-      "optionalDependencies": [
-        "session"
-      ],
+      "optionalDependencies": ["session"],
       "env": [],
       "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
       "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-security",
@@ -440,9 +435,7 @@
       "package": "egg-jsonp",
       "name": "jsonp",
       "dependencies": [],
-      "optionalDependencies": [
-        "security"
-      ],
+      "optionalDependencies": ["security"],
       "env": [],
       "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
       "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-jsonp",
@@ -453,9 +446,7 @@
       "package": "egg-onerror",
       "name": "onerror",
       "dependencies": [],
-      "optionalDependencies": [
-        "jsonp"
-      ],
+      "optionalDependencies": ["jsonp"],
       "env": [],
       "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
       "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-onerror",
@@ -499,9 +490,7 @@
       "package": "egg-multipart",
       "name": "multipart",
       "dependencies": [],
-      "optionalDependencies": [
-        "schedule"
-      ],
+      "optionalDependencies": ["schedule"],
       "env": [],
       "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
       "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-multipart",
@@ -511,13 +500,9 @@
       "enable": true,
       "package": "egg-development",
       "name": "development",
-      "dependencies": [
-        "watcher"
-      ],
+      "dependencies": ["watcher"],
       "optionalDependencies": [],
-      "env": [
-        "local"
-      ],
+      "env": ["local"],
       "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
       "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-development",
       "version": "2.7.0"
@@ -526,9 +511,7 @@
       "enable": true,
       "package": "egg-logrotator",
       "name": "logrotator",
-      "dependencies": [
-        "schedule"
-      ],
+      "dependencies": ["schedule"],
       "optionalDependencies": [],
       "env": [],
       "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
@@ -561,10 +544,7 @@
       "enable": true,
       "package": "egg-view-nunjucks",
       "name": "nunjucks",
-      "dependencies": [
-        "security",
-        "view"
-      ],
+      "dependencies": ["security", "view"],
       "optionalDependencies": [],
       "env": [],
       "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\config\\plugin.js",
@@ -586,9 +566,7 @@
       "enable": true,
       "package": "egg-session-redis",
       "name": "sessionRedis",
-      "dependencies": [
-        "redis"
-      ],
+      "dependencies": ["redis"],
       "optionalDependencies": [],
       "env": [],
       "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\config\\plugin.js",

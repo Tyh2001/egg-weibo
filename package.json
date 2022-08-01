@@ -1,7 +1,5 @@
 {
-  "name": "weibo",
-  "version": "1.0.0",
-  "description": "",
+  "name": "egg-weibo",
   "private": true,
   "egg": {
     "declarations": true
@@ -18,7 +16,8 @@
     "egg-view-nunjucks": "^2.2.0",
     "mysql2": "^2.2.3",
     "mz-modules": "^2.1.0",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.7.1"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -33,9 +32,10 @@
     "node": ">=10.0.0"
   },
   "scripts": {
+    "dev": "egg-bin dev",
+    "prettier": "prettier --write .",
     "start": "egg-scripts start --daemon --title=egg-server-weibo",
     "stop": "egg-scripts stop --title=egg-server-weibo",
-    "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run test-local",
     "test-local": "egg-bin test",

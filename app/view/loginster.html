@@ -1,17 +1,15 @@
-{% extends "./layout/layout.html" %}
-
-{% block content %}
+{% extends "./layout/layout.html" %} {% block content %}
 
 <!-- 注册页面 -->
-<link rel="stylesheet" href="/css/loginster.css">
-
+<link rel="stylesheet" href="/css/loginster.css" />
 
 <!-- 如果已经登录 再访问登录页面或者注册页面 展示下面内容 -->
 {% if isLogin %}
 
 <div class="loginster-big-box">
-
-  <p class="loginster-admin">欢迎{{username}},您已注册,请返回<a href="/">首页</a></p>
+  <p class="loginster-admin">
+    欢迎{{username}},您已注册,请返回<a href="/">首页</a>
+  </p>
 
   <!-- 否则跳转登录页面 -->
   {% else %}
@@ -22,162 +20,202 @@
 
       <div class="loginster-right-box">
         <h1>注册账号</h1>
-        <br>
-        <input id="username" class="inpa" type="text" placeholder="请输入账号">
-        <p class="usernamea" style="display: none;color: red;font-weight: 500;padding-left: 7px;">账号重复</p>
+        <br />
+        <input
+          id="username"
+          class="inpa"
+          type="text"
+          placeholder="请输入账号"
+        />
+        <p
+          class="usernamea"
+          style="display: none; color: red; font-weight: 500; padding-left: 7px"
+        >
+          账号重复
+        </p>
         <p class="usernameb" style></p>
-        <input id="password" class="inpb" type="password" placeholder="请输入密码">
-        <br><br>
-        <input id="password1" class="inpc" type="password" placeholder="再次请输入密码">
+        <input
+          id="password"
+          class="inpb"
+          type="password"
+          placeholder="请输入密码"
+        />
+        <br /><br />
+        <input
+          id="password1"
+          class="inpc"
+          type="password"
+          placeholder="再次请输入密码"
+        />
 
-        <svg class="eye" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z" />
-          <path fill-rule="evenodd"
-            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+        <svg
+          class="eye"
+          width="1em"
+          height="1em"
+          viewBox="0 0 16 16"
+          class="bi bi-eye"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+          />
         </svg>
-        <p class="passworda" style="display: none;color: red;font-weight: 500;padding-left: 7px;">两次密码不一致</p>
+        <p
+          class="passworda"
+          style="display: none; color: red; font-weight: 500; padding-left: 7px"
+        >
+          两次密码不一致
+        </p>
         <p class="passwordb" style></p>
         <select id="gender" name="">
           <option value="1">男</option>
           <option value="2">女</option>
           <option value="3">保密</option>
         </select>
-        <br><br>
+        <br /><br />
         <button class="loginster-btn">注册</button>
-        <br><br>
+        <br /><br />
         <a href="/login">已有账号？返回登录>>></a>
       </div>
     </div>
   </div>
 </div>
-{% endif %}
-
-{% endblock %}
-
-{% block js %}
+{% endif %} {% endblock %} {% block js %}
 
 <script>
   // 鼠标按下眼睛密码显示 并且改变颜色
-  $(".eye").mousedown(function () {
-    $(".eye").css("color", "#551a8b")
-    $(".inpb").attr("type", "text");
-    $(".inpc").attr("type", "text");
-  });
+  $('.eye').mousedown(function () {
+    $('.eye').css('color', '#551a8b')
+    $('.inpb').attr('type', 'text')
+    $('.inpc').attr('type', 'text')
+  })
   // 鼠标抬起眼睛密码加密 并且颜色变回
-  $(".eye").mouseup(function () {
-    $(".eye").css("color", "black")
-    $(".inpb").attr("type", "password");
-    $(".inpc").attr("type", "password");
+  $('.eye').mouseup(function () {
+    $('.eye').css('color', 'black')
+    $('.inpb').attr('type', 'password')
+    $('.inpc').attr('type', 'password')
   })
 
   // 下面两行是判断密码的计时器
-  let passwordtimeoutid;
-  let ispasswordsame = false;
+  let passwordtimeoutid
+  let ispasswordsame = false
   // 下面两行是判断用户名的计时器
-  let usernametimeoutid;
-  let isusernameexist = true;
+  let usernametimeoutid
+  let isusernameexist = true
 
   // 监听用户名是否存在
-  $("#username").on("input", function () {
+  $('#username').on('input', function () {
     // 防抖
     if (usernametimeoutid) {
-      clearTimeout(usernametimeoutid);
-    };
+      clearTimeout(usernametimeoutid)
+    }
     usernametimeoutid = setTimeout(function () {
       // 前端的数据拿到后台去对比 判断用户名是否存在
-      const username = $("#username").val();
+      const username = $('#username').val()
 
       // 用户名发送给后台
-      ajax.post("/api/user/isExist", {
-        username,
-      }, function (err, data) {
-        if (err) { //用户名不存在  这个用户名可用
-          $(".inpa").css("border-bottom-color", "blue");
-          $(".usernamea").css("display", "none");
-          $(".usernameb").css("display", "block");
-          isusernameexist = false;
-          return;
+      ajax.post(
+        '/api/user/isExist',
+        {
+          username
+        },
+        function (err, data) {
+          if (err) {
+            //用户名不存在  这个用户名可用
+            $('.inpa').css('border-bottom-color', 'blue')
+            $('.usernamea').css('display', 'none')
+            $('.usernameb').css('display', 'block')
+            isusernameexist = false
+            return
+          }
+          $('.inpa').css('border-bottom-color', 'red')
+          $('.usernamea').css('display', 'block')
+          $('.usernameb').css('display', 'none')
+          isusernameexist = true
         }
-        $(".inpa").css("border-bottom-color", "red");
-        $(".usernamea").css("display", "block");
-        $(".usernameb").css("display", "none");
-        isusernameexist = true;
-      });
-    }, 500);
-  });
+      )
+    }, 500)
+  })
 
   // 监听密码是否一致
-  $("#password1").on("input", function () {
+  $('#password1').on('input', function () {
     if (passwordtimeoutid) {
-      clearTimeout(passwordtimeoutid);
-    };
+      clearTimeout(passwordtimeoutid)
+    }
     passwordtimeoutid = setTimeout(function () {
       // 比对两个密码是否一致
-      const password = $("#password").val();
-      const password1 = $("#password1").val();
+      const password = $('#password').val()
+      const password1 = $('#password1').val()
       // 如果两个密码框内容一样时
       // √  显示-绿色  × 隐藏 文本框变成蓝色
       if (password === password1) {
-        $("#password").css("border-bottom-color", "blue");
-        $("#password1").css("border-bottom-color", "blue");
-        $(".passworda").css("display", "none");
-        $(".passwordb").css("display", "block");
-        ispasswordsame = true;
+        $('#password').css('border-bottom-color', 'blue')
+        $('#password1').css('border-bottom-color', 'blue')
+        $('.passworda').css('display', 'none')
+        $('.passwordb').css('display', 'block')
+        ispasswordsame = true
       } else {
-        $("#password").css("border-bottom-color", "red");
-        $("#password1").css("border-bottom-color", "red");
-        $(".passworda").css("display", "block");
-        $(".passwordb").css("display", "none");
-        ispasswordsame = false;
-      };
+        $('#password').css('border-bottom-color', 'red')
+        $('#password1').css('border-bottom-color', 'red')
+        $('.passworda').css('display', 'block')
+        $('.passwordb').css('display', 'none')
+        ispasswordsame = false
+      }
       // 如果 再次输入密码框内容为空时候 错号隐藏 文本框颜色变为蓝色
       // 这个效果是为了美观和用户体验  上面如果密码输入不一致时候 文本框颜色会变成红色
       // 当再次输入密码框内密码全部删掉之后框的颜色就变回蓝色
-      if (password1 === "") {
-        $(".password-info-cuo").css("display", "none");
-        $("#password1").css("outline-color", "#80bdff");
-      };
-    }, 500);
-  });
-
+      if (password1 === '') {
+        $('.password-info-cuo').css('display', 'none')
+        $('#password1').css('outline-color', '#80bdff')
+      }
+    }, 500)
+  })
 
   // 点击注册按钮
-  $(".loginster-btn").click(function (e) {
+  $('.loginster-btn').click(function (e) {
     // 阻止表单提交的默认行为 刷新页面
-    e.preventDefault();
+    e.preventDefault()
 
     // 判断用户名是否存在 为true 代表前端验证通过
     if (isusernameexist) {
-      alert("用户名已存在,请输入新的用户名！");
-      return;
-    };
+      alert('用户名已存在,请输入新的用户名！')
+      return
+    }
 
     // 如果两次密码不一致
     if (!ispasswordsame) {
-      alert("两次密码不一致,请重新输入");
-      return;
+      alert('两次密码不一致,请重新输入')
+      return
     }
 
     // 获取 用户名  密码  性别
-    const username = $("#username").val();
-    const password = $("#password").val();
-    const gender = parseInt($("#gender").val());
+    const username = $('#username').val()
+    const password = $('#password').val()
+    const gender = parseInt($('#gender').val())
 
     // 注册获取 用户名 密码 性别 发送给后台
-    ajax.post("/api/user/register", {
-      username,
-      password,
-      gender
-    }, function (err, data) {
-      if (err) {
-        alert(err);
-      };
-      // 注册完成后跳转登录页面
-      location.href = "/login";
-    });
-  });
+    ajax.post(
+      '/api/user/register',
+      {
+        username,
+        password,
+        gender
+      },
+      function (err, data) {
+        if (err) {
+          alert(err)
+        }
+        // 注册完成后跳转登录页面
+        location.href = '/login'
+      }
+    )
+  })
 </script>
 
 {% endblock %}

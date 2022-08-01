@@ -1,6 +1,6 @@
-"use strict";
+'use strict'
 module.exports = (app) => {
   app.beforeStart(async () => {
-    await app.model.sync(/* { force: true } */);
-  });
-};
+    await app.model.sync(/* { force: true } */)
+  })
+}

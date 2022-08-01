@@ -2,21 +2,19 @@
 
 <!-- 个人信息封装 -->
 <div class="user-info">
-  <img class="user-img" src="{{user.avatar}}" alt="">
+  <img class="user-img" src="{{user.avatar}}" alt="" />
   <span class="nickname">{{user.username}}</span>
-  <br><br>
+  <br /><br />
 
   {% if isMe %}
 
   <!-- 如果是我自己就显示 -->
   <a class="aite" href="/atMe">@提到我的({{atCount}})</a>
-  <hr>
+  <hr />
 
   <!-- 否则就显示下面的按钮 -->
 
-  {% else %}
-
-  {% if isMeFollow %}
+  {% else %} {% if isMeFollow %}
 
   <button class="notfollow">取消关注</button>
 
@@ -24,46 +22,50 @@
 
   <button class="follow">关注</button>
 
-  {% endif %}
-
-  {% endif %}
+  {% endif %} {% endif %}
 </div>
 
 <script>
   // 关注
-  $(".follow").click(function () {
+  $('.follow').click(function () {
     // 获取被关注人的id
-    const followerId = '{{user.id}}';
-    ajax.post("/api/profile/follow", {
-      followerId
-    },
+    const followerId = '{{user.id}}'
+    ajax.post(
+      '/api/profile/follow',
+      {
+        followerId
+      },
       function (err, data) {
         if (err) {
-          alert(err);
-          return;
+          alert(err)
+          return
         } else {
-          alert("关注成功");
-          location.href = "";
+          alert('关注成功')
+          location.href = ''
         }
-      })
+      }
+    )
   })
 
   // 取消关注
-  $(".notfollow").click(function () {
+  $('.notfollow').click(function () {
     // 获取被关注人的id
-    const followerId = '{{user.id}}';
-    ajax.post("/api/profile/notfollow", {
-      followerId
-    },
+    const followerId = '{{user.id}}'
+    ajax.post(
+      '/api/profile/notfollow',
+      {
+        followerId
+      },
       function (err, data) {
         if (err) {
-          alert(err);
-          return;
+          alert(err)
+          return
         } else {
           // alert("取关成功");
-          location.href = "";
+          location.href = ''
         }
-      })
+      }
+    )
   })
 </script>
 

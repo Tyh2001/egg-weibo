@@ -75,7 +75,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+      "templatePath": "D:\\项目文件\\egg-weibo\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -88,8 +88,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "D:\\项目文件\\egg-weibo\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "D:\\项目文件\\egg-weibo\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "customLogger": {
@@ -112,18 +112,10 @@
       "files": 10,
       "fileExtensions": [],
       "whitelist": null,
-      "tmpdir": "C:\\Users\\Admin\\AppData\\Local\\Temp\\egg-multipart-tmp\\weibo",
+      "tmpdir": "C:\\Users\\zj\\AppData\\Local\\Temp\\egg-multipart-tmp\\egg-weibo",
       "cleanSchedule": {
         "cron": "0 30 4 * * *"
       }
-    },
-    "development": {
-      "watchDirs": [],
-      "ignoreDirs": [],
-      "fastReady": false,
-      "reloadOnDebug": true,
-      "overrideDefault": false,
-      "overrideIgnore": false
     },
     "logrotator": {
       "filesRotateByHour": null,
@@ -136,15 +128,15 @@
     },
     "static": {
       "prefix": "/",
-      "dir": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo/app/public",
+      "dir": "D:\\项目文件\\egg-weibo/app/public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000
     },
     "view": {
-      "root": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\app\\view",
-      "cache": false,
+      "root": "D:\\项目文件\\egg-weibo\\app\\view",
+      "cache": true,
       "defaultExtension": ".html",
       "defaultViewEngine": "nunjucks",
       "mapping": {}
@@ -154,7 +146,7 @@
       "throwOnUndefined": false,
       "trimBlocks": false,
       "lstripBlocks": false,
-      "cache": false
+      "cache": true
     },
     "redis": {
       "default": {},
@@ -184,9 +176,9 @@
       "allErrors": true,
       "jsonPointers": true
     },
-    "env": "local",
-    "name": "weibo",
-    "keys": "<String len: 23>",
+    "env": "unittest",
+    "name": "egg-weibo",
+    "keys": "<String len: 27>",
     "cookies": {},
     "proxy": false,
     "maxIpsCount": 0,
@@ -195,9 +187,7 @@
     "ipHeaders": "x-forwarded-for",
     "hostHeaders": "",
     "pkg": {
-      "name": "weibo",
-      "version": "1.0.0",
-      "description": "",
+      "name": "egg-weibo",
       "private": true,
       "egg": {
         "declarations": true
@@ -214,7 +204,8 @@
         "egg-view-nunjucks": "^2.2.0",
         "mysql2": "^2.2.3",
         "mz-modules": "^2.1.0",
-        "pre-commit": "^1.2.2"
+        "pre-commit": "^1.2.2",
+        "prettier": "^2.7.1"
       },
       "devDependencies": {
         "autod": "^3.0.1",
@@ -229,9 +220,10 @@
         "node": ">=10.0.0"
       },
       "scripts": {
+        "dev": "egg-bin dev",
+        "prettier": "prettier --write .",
         "start": "egg-scripts start --daemon --title=egg-server-weibo",
         "stop": "egg-scripts stop --title=egg-server-weibo",
-        "dev": "egg-bin dev",
         "debug": "egg-bin debug",
         "test": "npm run test-local",
         "test-local": "egg-bin test",
@@ -250,9 +242,9 @@
       "author": "",
       "license": "MIT"
     },
-    "baseDir": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo",
-    "HOME": "C:\\Users\\Admin",
-    "rundir": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\run",
+    "baseDir": "D:\\项目文件\\egg-weibo",
+    "HOME": "C:\\Users\\zj",
+    "rundir": "D:\\项目文件\\egg-weibo\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -284,21 +276,19 @@
       "onerror": "<Function onerror>"
     },
     "logger": {
-      "dir": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\logs\\weibo",
+      "dir": "D:\\项目文件\\egg-weibo\\logs\\egg-weibo",
       "encoding": "utf8",
-      "env": "local",
+      "env": "unittest",
       "level": "INFO",
-      "consoleLevel": "INFO",
+      "consoleLevel": "WARN",
       "disableConsoleAfterReady": false,
       "outputJSON": false,
-      "buffer": true,
-      "appLogName": "weibo-web.log",
+      "buffer": false,
+      "appLogName": "egg-weibo-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {
-        "consoleLevel": "WARN"
-      },
+      "coreLogger": {},
       "allowDebugAtProd": false,
       "type": "agent"
     },
@@ -360,8 +350,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-session",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-session",
       "version": "3.2.0"
     },
     "security": {
@@ -373,8 +363,8 @@
         "session"
       ],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-security",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-security",
       "version": "2.8.0"
     },
     "jsonp": {
@@ -386,8 +376,8 @@
         "security"
       ],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-jsonp",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -399,8 +389,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-onerror",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -410,8 +400,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-i18n",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -421,8 +411,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-watcher",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-watcher",
       "version": "3.1.1"
     },
     "schedule": {
@@ -432,8 +422,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-schedule",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-schedule",
       "version": "3.6.5"
     },
     "multipart": {
@@ -445,24 +435,9 @@
         "schedule"
       ],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-multipart",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-multipart",
       "version": "2.10.3"
-    },
-    "development": {
-      "enable": true,
-      "package": "egg-development",
-      "name": "development",
-      "dependencies": [
-        "watcher"
-      ],
-      "optionalDependencies": [],
-      "env": [
-        "local"
-      ],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-development",
-      "version": "2.7.0"
     },
     "logrotator": {
       "enable": true,
@@ -473,8 +448,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-logrotator",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -484,8 +459,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-static",
+      "from": "D:\\项目文件\\egg-weibo\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -495,8 +470,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-view",
+      "from": "D:\\项目文件\\egg-weibo\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view",
       "version": "2.1.2"
     },
     "nunjucks": {
@@ -509,8 +484,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-view-nunjucks",
+      "from": "D:\\项目文件\\egg-weibo\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-view-nunjucks",
       "version": "2.2.0"
     },
     "redis": {
@@ -520,8 +495,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-redis",
+      "from": "D:\\项目文件\\egg-weibo\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-redis",
       "version": "2.4.0"
     },
     "sessionRedis": {
@@ -533,8 +508,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-session-redis",
+      "from": "D:\\项目文件\\egg-weibo\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-session-redis",
       "version": "2.1.0"
     },
     "sequelize": {
@@ -544,8 +519,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-sequelize",
+      "from": "D:\\项目文件\\egg-weibo\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-sequelize",
       "version": "6.0.0"
     },
     "ajv": {
@@ -555,9 +530,18 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\config\\plugin.js",
-      "path": "D:\\Tyh----------Tyh----------------\\我的项目\\egg-weibo\\node_modules\\egg-ajv",
+      "from": "D:\\项目文件\\egg-weibo\\config\\plugin.js",
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-ajv",
       "version": "1.0.1"
+    },
+    "egg-mock": {
+      "enable": true,
+      "path": "D:\\项目文件\\egg-weibo\\node_modules\\egg-mock",
+      "name": "egg-mock",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "version": "3.25.1"
     }
   }
 }

@@ -33,7 +33,7 @@ html {
   width: 950px;
   height: 230px;
   margin: 0 auto;
-  background-image: url("/images/上面背景.jpg");
+  background-image: url('/images/上面背景.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 3px;

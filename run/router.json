@@ -1,78 +1,47 @@
 [
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [],
     "path": "/",
     "regexp": "/^(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [],
     "path": "/login",
     "regexp": "/^\\/login(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
+    "stack": ["wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [],
     "path": "/loginster",
     "regexp": "/^\\/loginster(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
+    "stack": ["wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [],
     "path": "/setting",
     "regexp": "/^\\/setting(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [],
     "path": "/profile",
     "regexp": "/^\\/profile(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [
       {
         "name": "username",
@@ -87,174 +56,107 @@
     ],
     "path": "/profile/:username",
     "regexp": "/^\\/profile\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [],
     "path": "/square",
     "regexp": "/^\\/square(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [],
     "path": "/atMe",
     "regexp": "/^\\/atMe(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
+    "stack": ["wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/user/register",
     "regexp": "/^\\/api\\/user\\/register(?:\\/(?=$))?$/",
-    "stack": [
-      "anonymous",
-      "wrappedController"
-    ]
+    "stack": ["anonymous", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/user/isExist",
     "regexp": "/^\\/api\\/user\\/isExist(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
+    "stack": ["wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/user/login",
     "regexp": "/^\\/api\\/user\\/login(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
+    "stack": ["wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "DELETE"
-    ],
+    "methods": ["DELETE"],
     "paramNames": [],
     "path": "/api/user/delete",
     "regexp": "/^\\/api\\/user\\/delete(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/user/changeUserInfo",
     "regexp": "/^\\/api\\/user\\/changeUserInfo(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "anonymous",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "anonymous", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/user/chengepassword",
     "regexp": "/^\\/api\\/user\\/chengepassword(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "anonymous",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "anonymous", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/user/logout",
     "regexp": "/^\\/api\\/user\\/logout(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [],
     "path": "/api/user/getAtList",
     "regexp": "/^\\/api\\/user\\/getAtList(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/uploadImg",
     "regexp": "/^\\/api\\/uploadImg(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
+    "stack": ["wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/blog/createBlog",
     "regexp": "/^\\/api\\/blog\\/createBlog(?:\\/(?=$))?$/",
-    "stack": [
-      "anonymous",
-      "wrappedController"
-    ]
+    "stack": ["anonymous", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [
       {
         "name": "username",
@@ -279,17 +181,11 @@
     ],
     "path": "/api/blog/loadProfileMore/:username/:pageIndex",
     "regexp": "/^\\/api\\/blog\\/loadProfileMore\\/((?:[^\\/]+?))\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [
       {
         "name": "pageIndex",
@@ -304,17 +200,11 @@
     ],
     "path": "/api/blog/loadSquareMore/:pageIndex",
     "regexp": "/^\\/api\\/blog\\/loadSquareMore\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [
       {
         "name": "pageIndex",
@@ -329,17 +219,11 @@
     ],
     "path": "/api/blog/loadHomeBlogMore/:pageIndex",
     "regexp": "/^\\/api\\/blog\\/loadHomeBlogMore\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [
       {
         "name": "pageIndex",
@@ -354,43 +238,27 @@
     ],
     "path": "/api/blog/loadAtMeBlogMore/:pageIndex",
     "regexp": "/^\\/api\\/blog\\/loadAtMeBlogMore\\/((?:[^\\/]+?))(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/profile/follow",
     "regexp": "/^\\/api\\/profile\\/follow(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "POST"
-    ],
+    "methods": ["POST"],
     "paramNames": [],
     "path": "/api/profile/notfollow",
     "regexp": "/^\\/api\\/profile\\/notfollow(?:\\/(?=$))?$/",
-    "stack": [
-      "loginCheck",
-      "wrappedController"
-    ]
+    "stack": ["loginCheck", "wrappedController"]
   },
   {
     "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
+    "methods": ["HEAD", "GET"],
     "paramNames": [
       {
         "name": 0,
@@ -405,8 +273,6 @@
     ],
     "path": "*",
     "regexp": "/^((?:.*))(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
+    "stack": ["wrappedController"]
   }
 ]

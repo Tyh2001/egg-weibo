@@ -1,21 +1,13 @@
-{% set isNav = true %}
-
-{% extends "./layout/layout.html" %}
-
-{% import './macros/blog-list.html' as lis %}
-
-{% import './macros/loadMore.html' as loadBtn %}
-
-{% import './macros/input.html' as inputTag %}
-
-{% block content %}
+{% set isNav = true %} {% extends "./layout/layout.html" %} {% import
+'./macros/blog-list.html' as lis %} {% import './macros/loadMore.html' as
+loadBtn %} {% import './macros/input.html' as inputTag %} {% block content %}
 
 <!-- 首页 -->
-<link rel="stylesheet" href="/css/index.css">
-<link rel="stylesheet" href="/css/profile.css">
+<link rel="stylesheet" href="/css/index.css" />
+<link rel="stylesheet" href="/css/profile.css" />
 <div class="fanhui">
-  <h6 style="text-align: center;">返回</h6>
-  <h6 style="text-align: center;">顶部</h6>
+  <h6 style="text-align: center">返回</h6>
+  <h6 style="text-align: center">顶部</h6>
 </div>
 <div class="index-big-box">
   <!-- 左边盒子 -->
@@ -24,105 +16,92 @@
 
     {{ inputTag.input() }}
 
-    <br>
+    <br />
 
     <!-- 博客内容 -->
     <div class="left-box">
-      {% for item in blogList %}
-
-      {{ lis.list(item,CanReply=true) }}
-
-      {% endfor %}
+      {% for item in blogList %} {{ lis.list(item,CanReply=true) }} {% endfor %}
     </div>
 
     <!-- 加载更多 -->
-    {{ loadBtn.loadMore(
-    pageIndex,
-    pageSize,
-    count,
-    api='/api/blog/loadAtMeBlogMore/'
-    )}}
-
+    {{ loadBtn.loadMore( pageIndex, pageSize, count,
+    api='/api/blog/loadAtMeBlogMore/' )}}
   </div>
 </div>
 
-{% endblock %}
-
-{% block js %}
+{% endblock %} {% block js %}
 
 <script>
   // 发布博客插入图片
-  $(".index-a").click(function (e) {
-    e.preventDefault();
+  $('.index-a').click(function (e) {
+    e.preventDefault()
     //触发$("file-img") jquery 对象的点击事件
-    $(".index-file").click();
-  });
+    $('.index-file').click()
+  })
 
-
-  $(".index-file").change(function () {
-    const file = $(this)[0].files[0];
+  $('.index-file').change(function () {
+    const file = $(this)[0].files[0]
     ajax.upload('/api/uploadImg', file, function (err, data) {
       if (err) {
-        alert(err);
-        return;
-      };
-      $(".img-info").text(file.name);
-      $("#file-img-url").val(data.url);
-    });
-  });
+        alert(err)
+        return
+      }
+      $('.img-info').text(file.name)
+      $('#file-img-url').val(data.url)
+    })
+  })
 
   // 发布微博
-  $(".index-btn").click(function (e) {
-
+  $('.index-btn').click(function (e) {
     // 阻止默认行为
-    e.preventDefault();
+    e.preventDefault()
 
     //传递内容和图片地址
-    const image = $(".index-inp").val();
+    const image = $('.index-inp').val()
 
     // 传数据
     // /api/blog/createBlog 是后台路由
     // 传数据content
     // 获取到文本里的文字
-    const content = $(".index-textarea").val();
+    const content = $('.index-textarea').val()
     // 如果没有内容
     if (!content) {
-      alert("发表的内容不能为空");
-    };
+      alert('发表的内容不能为空')
+    }
     const data = {
-      content,
-    };
+      content
+    }
     if (image) {
       // 如果有图片就执行  没有就跳过
-      data.image = image;
-    };
-    ajax.post("/api/blog/createBlog", data, function (err, data) {
+      data.image = image
+    }
+    ajax.post('/api/blog/createBlog', data, function (err, data) {
       if (err) {
-        alert(err);
-        return;
-      };
-      location.href = "/";
-    });
-  });
+        alert(err)
+        return
+      }
+      location.href = '/'
+    })
+  })
 
   // 回复功能
-  $(".reply").click(function (e) {
+  $('.reply').click(function (e) {
     e.preventDefault()
-    const nickname = $(this).attr('data-nick-name');
-    const username = $(this).attr('data-user-name');
-    const content = $(this).attr('data-content');
+    const nickname = $(this).attr('data-nick-name')
+    const username = $(this).attr('data-user-name')
+    const content = $(this).attr('data-content')
 
-    const $replyStr = `// @${nickname} - ${username} ${content}`;
+    const $replyStr = `// @${nickname} - ${username} ${content}`
 
-    $("#textarea").val($replyStr);
-    $("#textarea")[0].focus();
-    $("#textarea")[0].setSelectionRange(0, 0);
+    $('#textarea').val($replyStr)
+    $('#textarea')[0].focus()
+    $('#textarea')[0].setSelectionRange(0, 0)
   })
 
   // @功能
-  $("#textarea").atwho({
-    at: "@",
-    data: '/api/user/getAtList',
+  $('#textarea').atwho({
+    at: '@',
+    data: '/api/user/getAtList'
   })
 </script>
 

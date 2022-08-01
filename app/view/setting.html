@@ -1,155 +1,187 @@
 {% extends "./layout/layout.html" %} {% block content %}
 
 <!-- 设置个人信息页面 -->
-<link rel="stylesheet" href="/css/setting.css">
+<link rel="stylesheet" href="/css/setting.css" />
 <div class="big-box">
   <div class="top-img"></div>
-  <img class="setting-tu" src="{{userInfo.avatar}}" alt="头像">
-  <input class="setting-xuanze" type="file" style="display: none;" />
+  <img class="setting-tu" src="{{userInfo.avatar}}" alt="头像" />
+  <input class="setting-xuanze" type="file" style="display: none" />
 
   <!-- <br> -->
   <div class="box-bottom">
     <a href="/">返回我的首页 ></a>
-    <br><br>
+    <br /><br />
     <span>昵称</span>
-    <input type="text" class="setting-inp setting-nickname" placeholder="请输入昵称" value='{{userInfo.nickname}}'
-      style="padding-left: 40px;">
-    <br>
-    <hr><br>
+    <input
+      type="text"
+      class="setting-inp setting-nickname"
+      placeholder="请输入昵称"
+      value="{{userInfo.nickname}}"
+      style="padding-left: 40px"
+    />
+    <br />
+    <hr />
+    <br />
     <span>城市</span>
-    <input type="text" class="setting-inp setting-city" placeholder="请输入城市" value='{{userInfo.city}}'
-      style="padding-left: 40px;">
-    <br>
-    <hr><br>
+    <input
+      type="text"
+      class="setting-inp setting-city"
+      placeholder="请输入城市"
+      value="{{userInfo.city}}"
+      style="padding-left: 40px"
+    />
+    <br />
+    <hr />
+    <br />
     <div class="setting-btn-box">
       <button class="setting-btn setting-btna">保存</button>
     </div>
-    <br>
-    <hr>
-    <br>
+    <br />
+    <hr />
+    <br />
     <h3>修改密码</h3>
-    <br>
+    <br />
     <span>当前密码</span>
-    <input type="text" class="setting-inp setting-oldpassword" placeholder="请输入当前密码 ">
-    <br>
-    <hr><br>
+    <input
+      type="text"
+      class="setting-inp setting-oldpassword"
+      placeholder="请输入当前密码 "
+    />
+    <br />
+    <hr />
+    <br />
     <span>新密码</span>
-    <input type="text " class="setting-inp setting-newpassword" placeholder="请输入新密码 " style="padding-left: 24px;">
-    <br>
-    <hr><br>
+    <input
+      type="text "
+      class="setting-inp setting-newpassword"
+      placeholder="请输入新密码 "
+      style="padding-left: 24px"
+    />
+    <br />
+    <hr />
+    <br />
     <span>确认密码</span>
-    <input type="text" class="setting-inp setting-newrepeatpassword" placeholder="请输入确认密码 ">
-    <br>
-    <hr><br>
+    <input
+      type="text"
+      class="setting-inp setting-newrepeatpassword"
+      placeholder="请输入确认密码 "
+    />
+    <br />
+    <hr />
+    <br />
     <div class="setting-btn-box">
       <button class="setting-btn setting-btnb">保存</button>
     </div>
-    <br><br><br>
+    <br /><br /><br />
     <button class="setting-btn-tuichu">退出登录</button>
   </div>
 </div>
 
-{% endblock %}
-
-{% block js %}
+{% endblock %} {% block js %}
 
 <script>
   // 点击头像修改头像
-  $(".setting-tu").click(function (e) {
-    e.preventDefault();
-    $(".setting-xuanze").click()
-    $(".setting-xuanze").change(function () {
-      const file = $(this)[0].files[0]; //获取图片信息
+  $('.setting-tu').click(function (e) {
+    e.preventDefault()
+    $('.setting-xuanze').click()
+    $('.setting-xuanze').change(function () {
+      const file = $(this)[0].files[0] //获取图片信息
 
       // 上传头像
-      ajax.upload("/api/uploadImg", file, function (err, data) {
+      ajax.upload('/api/uploadImg', file, function (err, data) {
         if (err) {
-          alert(err);
-          return;
-        };
+          alert(err)
+          return
+        }
         // 将图片地址变更为res.data.url
-        $(".setting-tu").attr("src", data.url);
-      });
-    });
+        $('.setting-tu').attr('src', data.url)
+      })
+    })
   })
   // 更改基本信息
-  $(".setting-btna").click(function (e) {
-
-    e.preventDefault();
+  $('.setting-btna').click(function (e) {
+    e.preventDefault()
     // 获取基本信息 昵称  城市  头像的url
-    const newnickname = $(".setting-nickname").val();
-    const newcity = $(".setting-city").val();
-    const newavatar = $(".setting-tu").attr("src");
+    const newnickname = $('.setting-nickname').val()
+    const newcity = $('.setting-city').val()
+    const newavatar = $('.setting-tu').attr('src')
 
     // 发送数据  新昵称  新城市 新头像
-    ajax.post("/api/user/changeUserInfo", {
-      nickname: newnickname,
-      city: newcity,
-      avatar: newavatar
-    }, function (err, data) {
-      if (err) {
-        alert(err);
-        return;
+    ajax.post(
+      '/api/user/changeUserInfo',
+      {
+        nickname: newnickname,
+        city: newcity,
+        avatar: newavatar
+      },
+      function (err, data) {
+        if (err) {
+          alert(err)
+          return
+        }
+        alert('更新用户成功')
       }
-      alert("更新用户成功");
-    });
-  });
+    )
+  })
 
   // 更改密码
-  $(".setting-btnb").click(function (e) {
+  $('.setting-btnb').click(function (e) {
     // 阻止默认行为
-    e.preventDefault();
+    e.preventDefault()
 
-    const oldpassword = $(".setting-oldpassword").val();
-    const newpassword = $(".setting-newpassword").val();
-    const newrepeatpassword = $(".setting-newrepeatpassword").val();
+    const oldpassword = $('.setting-oldpassword').val()
+    const newpassword = $('.setting-newpassword').val()
+    const newrepeatpassword = $('.setting-newrepeatpassword').val()
 
     // 判断原密码与新密码是否重复
     if (oldpassword === newpassword) {
-      alert("更改密码失败,原始密码和新密码相同！");
-      return; //接下来不在执行
-    };
+      alert('更改密码失败,原始密码和新密码相同！')
+      return //接下来不在执行
+    }
 
     // 确认密码时 判断两次密码是否一致
     if (newpassword !== newrepeatpassword) {
-      alert("更改密码失败,新密码两次输入不相同");
-      return;
-    };
+      alert('更改密码失败,新密码两次输入不相同')
+      return
+    }
 
     // 发送给后台数据 新密码和旧密码
-    ajax.post("/api/user/chengepassword", {
-      oldpassword,
-      newpassword
-    }, function (err, data) {
-      if (err) {
-        alert(err);
-        return;
-      };
-      alert("修改密码成功");
-      // 清空表单
-      $(".setting-oldpassword").val("");
-      $(".setting-newpassword").val("");
-      $(".setting-newrepeatpassword").val("");
-    });
-  });
-
-  // 注销账号
-  $(".setting-btn-tuichu").click(function () {
-    if (confirm("您是否要退出登录？") == false) {
-      return;
-    };
-
-    // 触发注销的路由
-    ajax.post("/api/user/logout",
+    ajax.post(
+      '/api/user/chengepassword',
+      {
+        oldpassword,
+        newpassword
+      },
       function (err, data) {
         if (err) {
-          alert(err);
-          return;
-        };
-        alert("退出账号成功！");
-        location.href = "/";
-      });
-  });
+          alert(err)
+          return
+        }
+        alert('修改密码成功')
+        // 清空表单
+        $('.setting-oldpassword').val('')
+        $('.setting-newpassword').val('')
+        $('.setting-newrepeatpassword').val('')
+      }
+    )
+  })
+
+  // 注销账号
+  $('.setting-btn-tuichu').click(function () {
+    if (confirm('您是否要退出登录？') == false) {
+      return
+    }
+
+    // 触发注销的路由
+    ajax.post('/api/user/logout', function (err, data) {
+      if (err) {
+        alert(err)
+        return
+      }
+      alert('退出账号成功！')
+      location.href = '/'
+    })
+  })
 </script>
 
 {% endblock %}

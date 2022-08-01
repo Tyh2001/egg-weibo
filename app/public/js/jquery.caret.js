@@ -1,16 +1,16 @@
-(function (root, factory) {
-  if (typeof define === "function" && define.amd) {
+;(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(["jquery"], function ($) {
-      return (root.returnExportsGlobal = factory($));
-    });
-  } else if (typeof exports === "object") {
+    define(['jquery'], function ($) {
+      return (root.returnExportsGlobal = factory($))
+    })
+  } else if (typeof exports === 'object') {
     // Node. Does not work with strict CommonJS, but
     // only CommonJS-like enviroments that support module.exports,
     // like Node.
-    module.exports = factory(require("jquery"));
+    module.exports = factory(require('jquery'))
   } else {
-    factory(jQuery);
+    factory(jQuery)
   }
 })(this, function ($) {
   /*
@@ -27,7 +27,7 @@
 插入符的位置.
 */
 
-  "use strict";
+  'use strict'
   let EditableCaret,
     InputCaret,
     Mirror,
@@ -38,443 +38,441 @@
     oFrame,
     oWindow,
     pluginName,
-    setContextBy;
+    setContextBy
 
-  pluginName = "caret";
+  pluginName = 'caret'
 
   EditableCaret = (function () {
-    function EditableCaret ($inputor) {
-      this.$inputor = $inputor;
-      this.domInputor = this.$inputor[0];
+    function EditableCaret($inputor) {
+      this.$inputor = $inputor
+      this.domInputor = this.$inputor[0]
     }
 
     EditableCaret.prototype.setPos = function (pos) {
-      let fn, found, offset, sel;
+      let fn, found, offset, sel
       if ((sel = oWindow.getSelection())) {
-        offset = 0;
-        found = false;
-        (fn = function (pos, parent) {
-          let node, range, _i, _len, _ref, _results;
-          _ref = parent.childNodes;
-          _results = [];
+        offset = 0
+        found = false
+        ;(fn = function (pos, parent) {
+          let node, range, _i, _len, _ref, _results
+          _ref = parent.childNodes
+          _results = []
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            node = _ref[_i];
+            node = _ref[_i]
             if (found) {
-              break;
+              break
             }
             if (node.nodeType === 3) {
               if (offset + node.length >= pos) {
-                found = true;
-                range = oDocument.createRange();
-                range.setStart(node, pos - offset);
-                sel.removeAllRanges();
-                sel.addRange(range);
-                break;
+                found = true
+                range = oDocument.createRange()
+                range.setStart(node, pos - offset)
+                sel.removeAllRanges()
+                sel.addRange(range)
+                break
               } else {
-                _results.push((offset += node.length));
+                _results.push((offset += node.length))
               }
             } else {
-              _results.push(fn(pos, node));
+              _results.push(fn(pos, node))
             }
           }
-          return _results;
-        })(pos, this.domInputor);
+          return _results
+        })(pos, this.domInputor)
       }
-      return this.domInputor;
-    };
+      return this.domInputor
+    }
 
     EditableCaret.prototype.getIEPosition = function () {
-      return this.getPosition();
-    };
+      return this.getPosition()
+    }
 
     EditableCaret.prototype.getPosition = function () {
-      let inputor_offset, offset;
-      offset = this.getOffset();
-      inputor_offset = this.$inputor.offset();
-      offset.left -= inputor_offset.left;
-      offset.top -= inputor_offset.top;
-      return offset;
-    };
+      let inputor_offset, offset
+      offset = this.getOffset()
+      inputor_offset = this.$inputor.offset()
+      offset.left -= inputor_offset.left
+      offset.top -= inputor_offset.top
+      return offset
+    }
 
     EditableCaret.prototype.getOldIEPos = function () {
-      let preCaretTextRange, textRange;
-      textRange = oDocument.selection.createRange();
-      preCaretTextRange = oDocument.body.createTextRange();
-      preCaretTextRange.moveToElementText(this.domInputor);
-      preCaretTextRange.setEndPoint("EndToEnd", textRange);
-      return preCaretTextRange.text.length;
-    };
+      let preCaretTextRange, textRange
+      textRange = oDocument.selection.createRange()
+      preCaretTextRange = oDocument.body.createTextRange()
+      preCaretTextRange.moveToElementText(this.domInputor)
+      preCaretTextRange.setEndPoint('EndToEnd', textRange)
+      return preCaretTextRange.text.length
+    }
 
     EditableCaret.prototype.getPos = function () {
-      let clonedRange, pos, range;
+      let clonedRange, pos, range
       if ((range = this.range())) {
-        clonedRange = range.cloneRange();
-        clonedRange.selectNodeContents(this.domInputor);
-        clonedRange.setEnd(range.endContainer, range.endOffset);
-        pos = clonedRange.toString().length;
-        clonedRange.detach();
-        return pos;
+        clonedRange = range.cloneRange()
+        clonedRange.selectNodeContents(this.domInputor)
+        clonedRange.setEnd(range.endContainer, range.endOffset)
+        pos = clonedRange.toString().length
+        clonedRange.detach()
+        return pos
       } else if (oDocument.selection) {
-        return this.getOldIEPos();
+        return this.getOldIEPos()
       }
-    };
+    }
 
     EditableCaret.prototype.getOldIEOffset = function () {
-      let range, rect;
-      range = oDocument.selection.createRange().duplicate();
-      range.moveStart("character", -1);
-      rect = range.getBoundingClientRect();
+      let range, rect
+      range = oDocument.selection.createRange().duplicate()
+      range.moveStart('character', -1)
+      rect = range.getBoundingClientRect()
       return {
         height: rect.bottom - rect.top,
         left: rect.left,
-        top: rect.top,
-      };
-    };
+        top: rect.top
+      }
+    }
 
     EditableCaret.prototype.getOffset = function (pos) {
-      let clonedRange, offset, range, rect, shadowCaret;
+      let clonedRange, offset, range, rect, shadowCaret
       if (oWindow.getSelection && (range = this.range())) {
         if (range.endOffset - 1 > 0 && range.endContainer !== this.domInputor) {
-          clonedRange = range.cloneRange();
-          clonedRange.setStart(range.endContainer, range.endOffset - 1);
-          clonedRange.setEnd(range.endContainer, range.endOffset);
-          rect = clonedRange.getBoundingClientRect();
+          clonedRange = range.cloneRange()
+          clonedRange.setStart(range.endContainer, range.endOffset - 1)
+          clonedRange.setEnd(range.endContainer, range.endOffset)
+          rect = clonedRange.getBoundingClientRect()
           offset = {
             height: rect.height,
             left: rect.left + rect.width,
-            top: rect.top,
-          };
-          clonedRange.detach();
+            top: rect.top
+          }
+          clonedRange.detach()
         }
         if (!offset || (offset != null ? offset.height : void 0) === 0) {
-          clonedRange = range.cloneRange();
-          shadowCaret = $(oDocument.createTextNode("|"));
-          clonedRange.insertNode(shadowCaret[0]);
-          clonedRange.selectNode(shadowCaret[0]);
-          rect = clonedRange.getBoundingClientRect();
+          clonedRange = range.cloneRange()
+          shadowCaret = $(oDocument.createTextNode('|'))
+          clonedRange.insertNode(shadowCaret[0])
+          clonedRange.selectNode(shadowCaret[0])
+          rect = clonedRange.getBoundingClientRect()
           offset = {
             height: rect.height,
             left: rect.left,
-            top: rect.top,
-          };
-          shadowCaret.remove();
-          clonedRange.detach();
+            top: rect.top
+          }
+          shadowCaret.remove()
+          clonedRange.detach()
         }
       } else if (oDocument.selection) {
-        offset = this.getOldIEOffset();
+        offset = this.getOldIEOffset()
       }
       if (offset) {
-        offset.top += $(oWindow).scrollTop();
-        offset.left += $(oWindow).scrollLeft();
+        offset.top += $(oWindow).scrollTop()
+        offset.left += $(oWindow).scrollLeft()
       }
-      return offset;
-    };
+      return offset
+    }
 
     EditableCaret.prototype.range = function () {
-      let sel;
+      let sel
       if (!oWindow.getSelection) {
-        return;
+        return
       }
-      sel = oWindow.getSelection();
+      sel = oWindow.getSelection()
       if (sel.rangeCount > 0) {
-        return sel.getRangeAt(0);
+        return sel.getRangeAt(0)
       }
-      return null;
-    };
+      return null
+    }
 
-    return EditableCaret;
-  })();
+    return EditableCaret
+  })()
 
   InputCaret = (function () {
-    function InputCaret ($inputor) {
-      this.$inputor = $inputor;
-      this.domInputor = this.$inputor[0];
+    function InputCaret($inputor) {
+      this.$inputor = $inputor
+      this.domInputor = this.$inputor[0]
     }
 
     InputCaret.prototype.getIEPos = function () {
-      let endRange, inputor, len, normalizedValue, pos, range, textInputRange;
-      inputor = this.domInputor;
-      range = oDocument.selection.createRange();
-      pos = 0;
+      let endRange, inputor, len, normalizedValue, pos, range, textInputRange
+      inputor = this.domInputor
+      range = oDocument.selection.createRange()
+      pos = 0
       if (range && range.parentElement() === inputor) {
-        normalizedValue = inputor.value.replace(/\r\n/g, "\n");
-        len = normalizedValue.length;
-        textInputRange = inputor.createTextRange();
-        textInputRange.moveToBookmark(range.getBookmark());
-        endRange = inputor.createTextRange();
-        endRange.collapse(false);
-        if (textInputRange.compareEndPoints("StartToEnd", endRange) > -1) {
-          pos = len;
+        normalizedValue = inputor.value.replace(/\r\n/g, '\n')
+        len = normalizedValue.length
+        textInputRange = inputor.createTextRange()
+        textInputRange.moveToBookmark(range.getBookmark())
+        endRange = inputor.createTextRange()
+        endRange.collapse(false)
+        if (textInputRange.compareEndPoints('StartToEnd', endRange) > -1) {
+          pos = len
         } else {
-          pos = -textInputRange.moveStart("character", -len);
+          pos = -textInputRange.moveStart('character', -len)
         }
       }
-      return pos;
-    };
+      return pos
+    }
 
     InputCaret.prototype.getPos = function () {
       if (oDocument.selection) {
-        return this.getIEPos();
+        return this.getIEPos()
       }
-      return this.domInputor.selectionStart;
-    };
+      return this.domInputor.selectionStart
+    }
 
     InputCaret.prototype.setPos = function (pos) {
-      let inputor, range;
-      inputor = this.domInputor;
+      let inputor, range
+      inputor = this.domInputor
       if (oDocument.selection) {
-        range = inputor.createTextRange();
-        range.move("character", pos);
-        range.select();
+        range = inputor.createTextRange()
+        range.move('character', pos)
+        range.select()
       } else if (inputor.setSelectionRange) {
-        inputor.setSelectionRange(pos, pos);
+        inputor.setSelectionRange(pos, pos)
       }
-      return inputor;
-    };
+      return inputor
+    }
 
     InputCaret.prototype.getIEOffset = function (pos) {
-      let h, textRange, x, y;
-      textRange = this.domInputor.createTextRange();
-      pos || (pos = this.getPos());
-      textRange.move("character", pos);
-      x = textRange.boundingLeft;
-      y = textRange.boundingTop;
-      h = textRange.boundingHeight;
+      let h, textRange, x, y
+      textRange = this.domInputor.createTextRange()
+      pos || (pos = this.getPos())
+      textRange.move('character', pos)
+      x = textRange.boundingLeft
+      y = textRange.boundingTop
+      h = textRange.boundingHeight
       return {
         left: x,
         top: y,
-        height: h,
-      };
-    };
+        height: h
+      }
+    }
 
     InputCaret.prototype.getOffset = function (pos) {
-      let $inputor, offset, position;
-      $inputor = this.$inputor;
+      let $inputor, offset, position
+      $inputor = this.$inputor
       if (oDocument.selection) {
-        offset = this.getIEOffset(pos);
-        offset.top += $(oWindow).scrollTop() + $inputor.scrollTop();
-        offset.left += $(oWindow).scrollLeft() + $inputor.scrollLeft();
-        return offset;
+        offset = this.getIEOffset(pos)
+        offset.top += $(oWindow).scrollTop() + $inputor.scrollTop()
+        offset.left += $(oWindow).scrollLeft() + $inputor.scrollLeft()
+        return offset
       }
-      offset = $inputor.offset();
-      position = this.getPosition(pos);
+      offset = $inputor.offset()
+      position = this.getPosition(pos)
       return (offset = {
         left: offset.left + position.left - $inputor.scrollLeft(),
         top: offset.top + position.top - $inputor.scrollTop(),
-        height: position.height,
-      });
-    };
+        height: position.height
+      })
+    }
 
     InputCaret.prototype.getPosition = function (pos) {
-      let $inputor, at_rect, end_range, format, html, mirror, start_range;
-      $inputor = this.$inputor;
+      let $inputor, at_rect, end_range, format, html, mirror, start_range
+      $inputor = this.$inputor
       format = function (value) {
-        value = value
-          .replace(/<|>|`|"|&/g, "?")
-          .replace(/\r\n|\r|\n/g, "<br/>");
+        value = value.replace(/<|>|`|"|&/g, '?').replace(/\r\n|\r|\n/g, '<br/>')
         if (/firefox/i.test(navigator.userAgent)) {
-          value = value.replace(/\s/g, "&nbsp;");
+          value = value.replace(/\s/g, '&nbsp;')
         }
-        return value;
-      };
-      if (pos === void 0) {
-        pos = this.getPos();
+        return value
       }
-      start_range = $inputor.val().slice(0, pos);
-      end_range = $inputor.val().slice(pos);
+      if (pos === void 0) {
+        pos = this.getPos()
+      }
+      start_range = $inputor.val().slice(0, pos)
+      end_range = $inputor.val().slice(pos)
       html =
         "<span style='position: relative; display: inline;'>" +
         format(start_range) +
-        "</span>";
+        '</span>'
       html +=
-        "<span id='caret' style='position: relative; display: inline;'>|</span>";
+        "<span id='caret' style='position: relative; display: inline;'>|</span>"
       html +=
         "<span style='position: relative; display: inline;'>" +
         format(end_range) +
-        "</span>";
-      mirror = new Mirror($inputor);
-      return (at_rect = mirror.create(html).rect());
-    };
+        '</span>'
+      mirror = new Mirror($inputor)
+      return (at_rect = mirror.create(html).rect())
+    }
 
     InputCaret.prototype.getIEPosition = function (pos) {
-      let h, inputorOffset, offset, x, y;
-      offset = this.getIEOffset(pos);
-      inputorOffset = this.$inputor.offset();
-      x = offset.left - inputorOffset.left;
-      y = offset.top - inputorOffset.top;
-      h = offset.height;
+      let h, inputorOffset, offset, x, y
+      offset = this.getIEOffset(pos)
+      inputorOffset = this.$inputor.offset()
+      x = offset.left - inputorOffset.left
+      y = offset.top - inputorOffset.top
+      h = offset.height
       return {
         left: x,
         top: y,
-        height: h,
-      };
-    };
+        height: h
+      }
+    }
 
-    return InputCaret;
-  })();
+    return InputCaret
+  })()
 
   Mirror = (function () {
     Mirror.prototype.css_attr = [
-      "borderBottomWidth",
-      "borderLeftWidth",
-      "borderRightWidth",
-      "borderTopStyle",
-      "borderRightStyle",
-      "borderBottomStyle",
-      "borderLeftStyle",
-      "borderTopWidth",
-      "boxSizing",
-      "fontFamily",
-      "fontSize",
-      "fontWeight",
-      "height",
-      "letterSpacing",
-      "lineHeight",
-      "marginBottom",
-      "marginLeft",
-      "marginRight",
-      "marginTop",
-      "outlineWidth",
-      "overflow",
-      "overflowX",
-      "overflowY",
-      "paddingBottom",
-      "paddingLeft",
-      "paddingRight",
-      "paddingTop",
-      "textAlign",
-      "textOverflow",
-      "textTransform",
-      "whiteSpace",
-      "wordBreak",
-      "wordWrap",
-    ];
+      'borderBottomWidth',
+      'borderLeftWidth',
+      'borderRightWidth',
+      'borderTopStyle',
+      'borderRightStyle',
+      'borderBottomStyle',
+      'borderLeftStyle',
+      'borderTopWidth',
+      'boxSizing',
+      'fontFamily',
+      'fontSize',
+      'fontWeight',
+      'height',
+      'letterSpacing',
+      'lineHeight',
+      'marginBottom',
+      'marginLeft',
+      'marginRight',
+      'marginTop',
+      'outlineWidth',
+      'overflow',
+      'overflowX',
+      'overflowY',
+      'paddingBottom',
+      'paddingLeft',
+      'paddingRight',
+      'paddingTop',
+      'textAlign',
+      'textOverflow',
+      'textTransform',
+      'whiteSpace',
+      'wordBreak',
+      'wordWrap'
+    ]
 
-    function Mirror ($inputor) {
-      this.$inputor = $inputor;
+    function Mirror($inputor) {
+      this.$inputor = $inputor
     }
 
     Mirror.prototype.mirrorCss = function () {
       let css,
-        _this = this;
+        _this = this
       css = {
-        position: "absolute",
+        position: 'absolute',
         left: -9999,
         top: 0,
-        zIndex: -20000,
-      };
-      if (this.$inputor.prop("tagName") === "TEXTAREA") {
-        this.css_attr.push("width");
+        zIndex: -20000
+      }
+      if (this.$inputor.prop('tagName') === 'TEXTAREA') {
+        this.css_attr.push('width')
       }
       $.each(this.css_attr, function (i, p) {
-        return (css[p] = _this.$inputor.css(p));
-      });
-      return css;
-    };
+        return (css[p] = _this.$inputor.css(p))
+      })
+      return css
+    }
 
     Mirror.prototype.create = function (html) {
-      this.$mirror = $("<div></div>");
-      this.$mirror.css(this.mirrorCss());
-      this.$mirror.html(html);
-      this.$inputor.after(this.$mirror);
-      return this;
-    };
+      this.$mirror = $('<div></div>')
+      this.$mirror.css(this.mirrorCss())
+      this.$mirror.html(html)
+      this.$inputor.after(this.$mirror)
+      return this
+    }
 
     Mirror.prototype.rect = function () {
-      let $flag, pos, rect;
-      $flag = this.$mirror.find("#caret");
-      pos = $flag.position();
+      let $flag, pos, rect
+      $flag = this.$mirror.find('#caret')
+      pos = $flag.position()
       rect = {
         left: pos.left,
         top: pos.top,
-        height: $flag.height(),
-      };
-      this.$mirror.remove();
-      return rect;
-    };
+        height: $flag.height()
+      }
+      this.$mirror.remove()
+      return rect
+    }
 
-    return Mirror;
-  })();
+    return Mirror
+  })()
 
   Utils = {
-    contentEditable ($inputor) {
+    contentEditable($inputor) {
       return !!(
-        $inputor[0].contentEditable && $inputor[0].contentEditable === "true"
-      );
-    },
-  };
+        $inputor[0].contentEditable && $inputor[0].contentEditable === 'true'
+      )
+    }
+  }
 
   methods = {
-    pos (pos) {
+    pos(pos) {
       if (pos || pos === 0) {
-        return this.setPos(pos);
+        return this.setPos(pos)
       }
-      return this.getPos();
+      return this.getPos()
     },
-    position (pos) {
+    position(pos) {
       if (oDocument.selection) {
-        return this.getIEPosition(pos);
+        return this.getIEPosition(pos)
       }
-      return this.getPosition(pos);
+      return this.getPosition(pos)
     },
-    offset (pos) {
-      let offset;
-      offset = this.getOffset(pos);
-      return offset;
-    },
-  };
+    offset(pos) {
+      let offset
+      offset = this.getOffset(pos)
+      return offset
+    }
+  }
 
-  oDocument = null;
+  oDocument = null
 
-  oWindow = null;
+  oWindow = null
 
-  oFrame = null;
+  oFrame = null
 
   setContextBy = function (settings) {
-    let iframe;
+    let iframe
     if ((iframe = settings != null ? settings.iframe : void 0)) {
-      oFrame = iframe;
-      oWindow = iframe.contentWindow;
-      return (oDocument = iframe.contentDocument || oWindow.document);
+      oFrame = iframe
+      oWindow = iframe.contentWindow
+      return (oDocument = iframe.contentDocument || oWindow.document)
     }
-    oFrame = void 0;
-    oWindow = window;
-    return (oDocument = document);
-  };
+    oFrame = void 0
+    oWindow = window
+    return (oDocument = document)
+  }
 
   discoveryIframeOf = function ($dom) {
-    let error;
-    oDocument = $dom[0].ownerDocument;
-    oWindow = oDocument.defaultView || oDocument.parentWindow;
+    let error
+    oDocument = $dom[0].ownerDocument
+    oWindow = oDocument.defaultView || oDocument.parentWindow
     try {
-      return (oFrame = oWindow.frameElement);
+      return (oFrame = oWindow.frameElement)
     } catch (_error) {
-      error = _error;
+      error = _error
     }
-  };
+  }
 
   $.fn.caret = function (method, value, settings) {
-    let caret;
+    let caret
     if (methods[method]) {
       if ($.isPlainObject(value)) {
-        setContextBy(value);
-        value = void 0;
+        setContextBy(value)
+        value = void 0
       } else {
-        setContextBy(settings);
+        setContextBy(settings)
       }
       caret = Utils.contentEditable(this)
         ? new EditableCaret(this)
-        : new InputCaret(this);
-      return methods[method].apply(caret, [value]);
+        : new InputCaret(this)
+      return methods[method].apply(caret, [value])
     }
-    return $.error("Method " + method + " does not exist on jQuery.caret");
-  };
+    return $.error('Method ' + method + ' does not exist on jQuery.caret')
+  }
 
-  $.fn.caret.EditableCaret = EditableCaret;
+  $.fn.caret.EditableCaret = EditableCaret
 
-  $.fn.caret.InputCaret = InputCaret;
+  $.fn.caret.InputCaret = InputCaret
 
-  $.fn.caret.Utils = Utils;
+  $.fn.caret.Utils = Utils
 
-  $.fn.caret.apis = methods;
-});
+  $.fn.caret.apis = methods
+})

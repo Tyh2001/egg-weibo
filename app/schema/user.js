@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 /**
  * schema
@@ -8,43 +8,43 @@
 //  用户名 密码 性别 昵称 头像 城市 格式校验
 // 配置规则
 module.exports = {
-  type: "object",
+  type: 'object',
   // 对象里面有哪些属性
   properties: {
     username: {
-      type: "string",
+      type: 'string',
       // 最小长度和最大长度
       minLength: 5,
       maxLength: 15,
-      pattern: "^[a-zA-Z0-9][a-zA-Z0-9_]+$",
+      pattern: '^[a-zA-Z0-9][a-zA-Z0-9_]+$'
     },
     password: {
       // 数据类型 字符串
-      type: "string",
+      type: 'string',
       // 最小长度和最大长度
       minLength: 3,
-      maxLength: 15,
+      maxLength: 15
       // pattern: '^\.$',
     },
     gender: {
-      type: "number",
+      type: 'number',
       minimum: 1,
-      maximum: 3,
+      maximum: 3
     },
     nickname: {
-      type: "string",
+      type: 'string',
       minimum: 3,
-      minimum: 10,
+      minimum: 10
     },
     avatar: {
-      type: "string",
-      maxLength: 255,
+      type: 'string',
+      maxLength: 255
     },
     city: {
-      type: "string",
+      type: 'string',
       minLength: 2,
-      maxLength: 255,
-    },
+      maxLength: 255
+    }
   },
-  $async: true, //异步
-};
+  $async: true //异步
+}

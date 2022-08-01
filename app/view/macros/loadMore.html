@@ -7,49 +7,47 @@
   </div>
 </div>
 
-
 <script>
-  const pageIndex = parseInt('{{pageIndex}}');
-  const pageSize = parseInt('{{pageSize}}');
-  const count = parseInt('{{count}}');
+  const pageIndex = parseInt('{{pageIndex}}')
+  const pageSize = parseInt('{{pageSize}}')
+  const count = parseInt('{{count}}')
 
   if (pageSize * pageIndex >= count) {
-    $(".next").hide()
+    $('.next').hide()
   }
 
   // 返回顶部的按钮效果
   // 滚轮向下滑动返回顶部按钮就显示
   $(window).scroll(function () {
-    var a = $(this).scrollTop();
+    var a = $(this).scrollTop()
     if (a > 0) {
-      $(".fanhui").css("display", "block");
+      $('.fanhui').css('display', 'block')
     } else {
-      $(".fanhui").css("display", "none");
-    };
-  });
+      $('.fanhui').css('display', 'none')
+    }
+  })
 
   // 点击按钮页面返回顶部
-  $(".fanhui").click(function () {
-    $("html,body").animate({
-      scrollTop: 0,
-    }, 0)
-  });
+  $('.fanhui').click(function () {
+    $('html,body').animate(
+      {
+        scrollTop: 0
+      },
+      0
+    )
+  })
 
-  let nextPageIndex = pageIndex;
-  $(".next-box").click(function () {
-
-
+  let nextPageIndex = pageIndex
+  $('.next-box').click(function () {
     // 通过ajax获取数据
-    ajax.get('{{api}}' + nextPageIndex,
-      function (err, res) {
-        if (err) {
-          alert(err)
-        }
-        nextPageIndex = res.pageIndex; // 当前的页码
-        // 渲染dom
-        res.blogList.forEach(item => {
-          const $loadMoreTemplate =
-            `
+    ajax.get('{{api}}' + nextPageIndex, function (err, res) {
+      if (err) {
+        alert(err)
+      }
+      nextPageIndex = res.pageIndex // 当前的页码
+      // 渲染dom
+      res.blogList.forEach((item) => {
+        const $loadMoreTemplate = `
                 <img class="avatar" src="${item.user.avatar}" alt="用户头像">
                 <a href="/profile/{{user.username}}">
                     <span class="nickname">${item.user.username}:</span>
@@ -152,14 +150,14 @@
                 </div>
                 <div class="bottom-fff"></div>
             `
-          $('.left-box').append($loadMoreTemplate)
-        })
-
-        // 如果显示的数量 = 博客总量  就隐藏按钮
-        if (pageSize * (res.pageIndex) >= count) {
-          $(".next-box").hide()
-        }
+        $('.left-box').append($loadMoreTemplate)
       })
+
+      // 如果显示的数量 = 博客总量  就隐藏按钮
+      if (pageSize * res.pageIndex >= count) {
+        $('.next-box').hide()
+      }
+    })
   })
 </script>
 

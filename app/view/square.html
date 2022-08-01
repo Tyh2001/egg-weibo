@@ -1,44 +1,27 @@
-{% set isNav = true %}
-
-{% extends "./layout/layout.html" %}
-
-{% import './macros/blog-list.html' as lis %}
-
-{% import './macros/loadMore.html' as loadBtn %}
-
-{% block content %}
-
+{% set isNav = true %} {% extends "./layout/layout.html" %} {% import
+'./macros/blog-list.html' as lis %} {% import './macros/loadMore.html' as
+loadBtn %} {% block content %}
 
 <!-- 广场页面 -->
 <div class="fanhui">
-  <h6 style="text-align: center;">返回</h6>
-  <h6 style="text-align: center;">顶部</h6>
+  <h6 style="text-align: center">返回</h6>
+  <h6 style="text-align: center">顶部</h6>
 </div>
 
 <div class="big-box">
   <div class="left-box">
     <h3>广场</h3>
-    <hr class="hra">
+    <hr class="hra" />
 
     <!-- 博客内容封装 -->
-    {% for item in blogList %}
-
-    {{ lis.list(item) }}
-
-    {% endfor %}
-
+    {% for item in blogList %} {{ lis.list(item) }} {% endfor %}
   </div>
 
   <!-- <div class="right-box">
     </div> -->
-
 </div>
 
 <!-- 加载更多封装 -->
-{{loadBtn.loadMore(
-pageIndex,
-pageSize,
-count, api='/api/blog/loadProfileMore/'+userData.userInfo.username+"/"
-)}}
-
-{% endblock %}
+{{loadBtn.loadMore( pageIndex, pageSize, count,
+api='/api/blog/loadProfileMore/'+userData.userInfo.username+"/" )}} {% endblock
+%}

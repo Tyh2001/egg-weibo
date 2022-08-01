@@ -30,7 +30,7 @@ body {
 .loginster-left-box {
   width: 650px;
   height: 450px;
-  background-image: url("/images/注册页图片.jpg");
+  background-image: url('/images/注册页图片.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
