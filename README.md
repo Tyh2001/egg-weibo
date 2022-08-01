@@ -34,7 +34,7 @@ redis-server
 
 排序规则选择：utf8_general_ci
 
-导入 sql 文件，文件地址：https://github.com/Tyh2001/egg-weibo-mysql
+导入 sql 文件，文件地址：https://github.com/Tyh2001/egg-weibo/tree/master/mysql
 
 4. 安装依赖
 
