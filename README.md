@@ -1,16 +1,16 @@
 # Egg-weibo
 
-## 前言
+## 👋 前言
 
 盛邦微博是向用户提供丰富应用和完善服务的开放平台 内容: 首页、登陆/注册、广场页、用户管理（关注、粉丝）、评论、发表等。
 
 实现功能：登录注册、发布博客、关注取关、更改密码、更改用户信息、更换头像、@功能、加载更多、日期格式化等等
 
-## 技术栈
+## 🏝️ 技术栈
 
-Egg.js、Node.js、Nunjucks、jQuery、Ajax、Bootstrap、MySQL、Session、Redis
+`Egg.js` `Node.js` `Nunjucks` `jQuery` `Ajax` `Bootstrap` `MySQL` `Session` `Redis`
 
-## 启动
+## 🌏 启动
 
 1. 启动 PhpStudy
 
@@ -56,7 +56,7 @@ npm run dev
 http://localhost:7001
 ```
 
-## 账号
+## 🍿 账号列表
 
 账号列表
 
@@ -64,7 +64,6 @@ http://localhost:7001
 - duidui
 - qiqi666
 - tyh123
-
 - 12345
 - admin
 - admin1
@@ -73,6 +72,12 @@ http://localhost:7001
 密码统一为：12345
 ```
 
-## 其他说明
+## 🗨️ 其它说明
 
 该项目仅用作学习使用！！！
+
+## 🙏 贡献者
+
+该仓库由 [Tyh2001](https://github.com/Tyh2001) 提供。
+
+![](https://tianyuhao.cn/images/auto/weixin.png)
