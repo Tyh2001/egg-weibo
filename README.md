@@ -18,7 +18,7 @@ PhpStudy 下载地址：https://www.xp.cn
 
 2. 启动 redis
 
-redis 仓库地址：https://github.com/Tyh2001/egg-weibo-redis
+redis 仓库地址：https://github.com/Tyh2001/redis
 
 redis 启动命令：（在 redis 目录下启动 cmd 命令行输入）
 
