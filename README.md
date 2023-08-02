@@ -1,4 +1,4 @@
-# Egg-weibo
+# egg weibo
 
 ## 👋 前言
 
